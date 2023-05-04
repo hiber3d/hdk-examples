@@ -7,12 +7,12 @@ import { Containers } from "./Containers";
 import { RampedGrid } from "./RampedGrid";
 
 export const Platform: HDKComponent = (input) => (
-  <HNode p={[-10, -39.5, -72]}>
+  <HNode {...input}>
     <Grid
-      rows={15}
-      columns={15}
+      rows={10}
+      columns={2}
       itemSpacing={8}
-      children={(row, column) => {
+      children={() => {
         return <Prefab id="en_p_grid_platform_01" s={[2.2, 1, 2.2]} />;
       }}
     ></Grid>

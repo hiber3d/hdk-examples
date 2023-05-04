@@ -14,8 +14,10 @@ export const Containers: HDKComponent = (props) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
       ></Stack>
-      <Prefab id="trashcontainer_01" p={[-20, 0, -30]} rotY={70} s={2} />
-      <Prefab id="trashcontainer_01_t1" p={[-16, 0, -24]} rotY={30} s={2} />
+      <HNode p={[-20, 0, -10]}>
+        <Prefab id="trashcontainer_01" rotY={70} s={2} />
+        <Prefab id="trashcontainer_01_t1" p={[-16, 0, -24]} rotY={30} s={2} />
+      </HNode>
       <Stack
         p={[0, 0, 12]}
         dim={4}

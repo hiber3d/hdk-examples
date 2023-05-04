@@ -39,7 +39,7 @@ const Tube: HDKComponent<{ length: number }> = (input) => {
 
 export const StarshipHiberion = (props: {}) => {
   return (
-    <HNode s={0.5}>
+    <HNode s={1}>
       <HNode>
         <Prefab
           id="en_m_hiberpunk_building_01_top"
@@ -60,6 +60,7 @@ export const StarshipHiberion = (props: {}) => {
             <Prefab id="torus_thick_01" rotX={90} s={40} z={-20} />
             <Prefab id="torus_thin_01" rotX={90} s={52} z={-20} />
             <HNode p={[0, 0, -140]}>
+              <Platform p={[0, 0, 0]} />
               <InCircle
                 r={[90, 0, 0]}
                 faceCenter={true}
@@ -129,7 +130,6 @@ export const StarshipHiberion = (props: {}) => {
                 </Tube>
               </HNode>
             </HNode>
-            <Platform />
           </Tube>
         </Tube>
       </HNode>
