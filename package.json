@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "workspaces": [
+    "example_1_hello_hiberworld",
+    "example_2_builder",
+    "example_3_game_mechanics",
+    "example_4_meshes_and_avatars"
+  ]
+}

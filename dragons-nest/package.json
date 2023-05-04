@@ -1,0 +1,19 @@
+{
+  "name": "dragons-nest",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "hdk dev --open",
+    "upload": "hdk upload"
+  },
+  "dependencies": {
+    "@hiber3d/hdk-cli": "^0.4.15",
+    "@hiber3d/hdk-core": "^0.1.3",
+    "@hiber3d/hdk-react": "^0.2.2",
+    "@hiber3d/hdk-react-components": "^0.2.2",
+    "@hiber3d/hdk-utils": "^0.1.2",
+    "react": "^18.2.0",
+    "react-reconciler": "^0.29.0"
+  }
+}
