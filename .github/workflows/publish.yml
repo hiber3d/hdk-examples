@@ -1,0 +1,167 @@
+name: "Publish World"
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  Setup:
+    name: Install dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+
+      - uses: ./.github/actions/restore-cache
+        id: cache-dependencies
+
+      - name: Install dependencies
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: yarn --frozen-lockfile
+
+  Publish:
+    name: Publish worlds
+    runs-on: ubuntu-latest
+    needs: Setup
+    env:
+      DEVELOPER_TOKEN: ${{ secrets.DEVELOPER_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/restore-cache
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            example_1_hello_hiberworld:
+              - 'example_1_hello_hiberworld/**'
+            example_2_builder:
+              - 'example_2_builder/**'            
+            example_3_game_mechanics:
+              - 'example_3_game_mechanics/**'                
+            example_4_meshes_and_avatars:
+              - 'example_4_meshes_and_avatars/**'                
+            example_5_procedural_rotation:
+              - 'example_5_procedural_rotation/**'                
+            example_6_media_and_interaction:
+              - 'example_6_media_and_interaction/**'               
+            example_7_signals:
+              - 'example_7_signals/**'
+
+            all-assets:
+              - 'all-assets/**'
+            oasis_world:
+              - 'oasis_world/**'            
+            dragons-nest:
+              - 'dragons-nest/**'
+            find-the-path:
+              - 'find-the-path/**'
+            kraken-battle:
+              - 'kraken-battle/**'
+            train-stowaway:
+              - 'train-stowaway/**'
+            volcano-escape:
+              - 'volcano-escape/**'
+            hiber-dig:
+              - 'hiber-dig/**'
+            balloons:
+              - '99-balloons/**'
+
+      - name: Upload 'all-assets'
+        if: steps.changes.outputs.all-assets == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "all-assets"
+
+      - name: Upload 'example_1_hello_hiberworld'
+        if: steps.changes.outputs.example_1_hello_hiberworld == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_1_hello_hiberworld"
+
+      - name: Upload 'example_2_builder'
+        if: steps.changes.outputs.example_2_builder == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_2_builder"
+
+      - name: Upload 'example_3_game_mechanics'
+        if: steps.changes.outputs.example_3_game_mechanics == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_3_game_mechanics"
+
+      - name: Upload 'example_4_meshes_and_avatars'
+        if: steps.changes.outputs.example_4_meshes_and_avatars == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_4_meshes_and_avatars"
+
+      - name: Upload 'example_5_procedural_rotation'
+        if: steps.changes.outputs.example_5_procedural_rotation == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_5_procedural_rotation"
+
+      - name: Upload 'example_6_media_and_interaction'
+        if: steps.changes.outputs.example_6_media_and_interaction == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_6_media_and_interaction"
+
+      - name: Upload 'example_7_signals'
+        if: steps.changes.outputs.example_7_signals == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "example_7_signals"
+
+      - name: Upload 'oasis_world'
+        if: steps.changes.outputs.oasis_world == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "oasis_world"
+
+      # - name: Upload 'dragons-nest'
+      #   if: steps.changes.outputs.dragons-nest == 'true'
+      #   uses: HiberWorld/code-kit-upload@latest
+      #   with:
+      #     world: "dragons-nest"
+
+      - name: Upload 'kraken-battle'
+        if: steps.changes.outputs.kraken-battle == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "kraken-battle"
+
+      - name: Upload 'find-the-path'
+        if: steps.changes.outputs.find-the-path == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "find-the-path"
+
+      - name: Upload 'train-stowaway'
+        if: steps.changes.outputs.train-stowaway == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "train-stowaway"
+
+      - name: Upload 'volcano-escape'
+        if: steps.changes.outputs.volcano-escape == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "volcano-escape"
+
+      - name: Upload 'hiber-dig'
+        if: steps.changes.outputs.hiber-dig == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "hiber-dig"
+
+      - name: Upload '99-balloons'
+        if: steps.changes.outputs.balloons == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "99-balloons"

@@ -1,0 +1,27 @@
+name: "Restore cache"
+description: "Install and cache node_modules"
+
+inputs:
+  node-version:
+    description: "Node version to use, default to LTS Fermium (16.x)"
+    required: false
+    default: "18"
+outputs:
+  cache-hit:
+    description: "Forward actions/cache cache-hit output"
+    value: ${{ steps.node-cache.outputs.cache-hit }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Use Node.js ${{ inputs.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Cache Node Modules in
+      id: node-cache
+      uses: actions/cache@v3
+      with:
+        path: "**/node_modules"
+        key: node-modules-${{ inputs.node-version }}-${{ hashFiles('yarn.lock') }}
