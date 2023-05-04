@@ -124,11 +124,11 @@ jobs:
         with:
           world: "oasis_world"
 
-      # - name: Upload 'dragons-nest'
-      #   if: steps.changes.outputs.dragons-nest == 'true'
-      #   uses: HiberWorld/code-kit-upload@latest
-      #   with:
-      #     world: "dragons-nest"
+      - name: Upload 'dragons-nest'
+        if: steps.changes.outputs.dragons-nest == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "dragons-nest"
 
       - name: Upload 'kraken-battle'
         if: steps.changes.outputs.kraken-battle == 'true'
