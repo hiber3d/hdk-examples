@@ -2,20 +2,24 @@ import { HNode, render } from "@hiber3d/hdk-react";
 
 import { StarshipHiberion } from "./StarshipHiberion";
 import { Wagyu } from "./Wagyu";
+import { Giants } from "./Giants";
+import { Prefab } from "@hiber3d/hdk-react";
+import { Stack } from "@hiber3d/hdk-react-components";
 
 const World = () => {
   return (
     <HNode>
-      <Wagyu>
+      <Giants p={[-10, 2, -10]} />
+      <Stack
+        dim={5}
+        segments={{ length: 4, direction: "IN" }}
+        renderItem={() => <Prefab id="cube_01" />}
+      >
+        <Prefab id="cactus_01" p={[0, 2, 0]} />
+      </Stack>
+      {/*     <Wagyu>
         <StarshipHiberion />
-      </Wagyu>
-      {/* <Stack
-      dim={5}
-      segments={{ length: 4, direction: "IN" }}
-      renderItem={() => <Prefab id="cube_01" />}
-    >
-      <Prefab id="cactus_01" p={[0, 2, 0]} />
-    </Stack> */}
+      </Wagyu>  */}
     </HNode>
   );
 };
