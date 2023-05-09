@@ -1,6 +1,10 @@
 import { materials } from "@hiber3d/hdk-core";
 import { HDKComponent, HNode, Prefab, useRandom } from "@hiber3d/hdk-react";
-import { Stack, InCircle, Spinning } from "@hiber3d/hdk-react-components";
+import {
+  SegmentedStack,
+  InCircle,
+  Spinning,
+} from "@hiber3d/hdk-react-components";
 
 export const MeatGrinder: HDKComponent = (props) => {
   const random = useRandom();
@@ -17,7 +21,7 @@ export const MeatGrinder: HDKComponent = (props) => {
         </Spinning>
 
         <HNode y={-10}>
-          <Stack
+          <SegmentedStack
             dim={7.1}
             segments={[{ length: 4, direction: "DOWN" }]}
             renderItem={(index) => (
@@ -107,7 +111,7 @@ export const MeatGrinder: HDKComponent = (props) => {
                 />
               </Spinning>
             </HNode>
-          </Stack>
+          </SegmentedStack>
         </HNode>
       </HNode>
     </HNode>

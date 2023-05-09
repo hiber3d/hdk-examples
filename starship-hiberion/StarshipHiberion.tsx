@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Stack,
+  SegmentedStack,
   InCircle,
   MediaDisplay,
   ImagePanel,
@@ -25,14 +25,14 @@ const Tube: HDKComponent<{ length: number }> = (input) => {
 
   return (
     <HNode r={r} p={p}>
-      <Stack
+      <SegmentedStack
         {...props}
         dim={16}
         segments={{ length, direction: "OUT" }}
         renderItem={() => <Prefab id="hiberpunk_blocks_o1_01" s={8} />}
       >
         {children}
-      </Stack>
+      </SegmentedStack>
     </HNode>
   );
 };

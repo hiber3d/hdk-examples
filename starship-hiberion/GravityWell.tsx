@@ -1,6 +1,6 @@
 import { Prefab as HPrefab } from "@hiber3d/hdk-core";
 import { HDKComponent, HNode, Prefab } from "@hiber3d/hdk-react";
-import { Stack } from "@hiber3d/hdk-react-components";
+import { SegmentedStack } from "@hiber3d/hdk-react-components";
 
 type GravityWellOpts = {
   hologram: HPrefab;
@@ -22,14 +22,14 @@ export const GravityWell: HDKComponent<GravityWellOpts> = (input) => {
         />
         <Prefab id={hologram} z={-5}></Prefab>
       </Prefab>
-      <Stack
+      <SegmentedStack
         {...props}
         dim={35}
         segments={{ length: 4, direction: "IN" }}
         renderItem={() => (
           <Prefab id="en_m_tunnel_bridge_01" s={[1, 1.3, 3]} scaleX={2} />
         )}
-      ></Stack>
+      ></SegmentedStack>
     </HNode>
   );
 };

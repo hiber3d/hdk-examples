@@ -4,22 +4,21 @@ import { StarshipHiberion } from "./StarshipHiberion";
 import { Wagyu } from "./Wagyu";
 import { Giants } from "./Giants";
 import { Prefab } from "@hiber3d/hdk-react";
-import { Stack } from "@hiber3d/hdk-react-components";
+import { SegmentedStack } from "@hiber3d/hdk-react-components";
 
 const World = () => {
   return (
     <HNode>
-      <Giants p={[-10, 2, -10]} />
-      <Stack
+      {/* <SegmentedStack
         dim={5}
         segments={{ length: 4, direction: "IN" }}
         renderItem={() => <Prefab id="cube_01" />}
       >
         <Prefab id="cactus_01" p={[0, 2, 0]} />
-      </Stack>
-      {/*     <Wagyu>
+      </SegmentedStack> */}
+      <Wagyu>
         <StarshipHiberion />
-      </Wagyu>  */}
+      </Wagyu>
     </HNode>
   );
 };

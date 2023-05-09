@@ -5,6 +5,7 @@ import { HDKComponent, HNode, Prefab } from "@hiber3d/hdk-react";
 
 import { Containers } from "./Containers";
 import { RampedGrid } from "./RampedGrid";
+import { Giants } from "./Giants";
 
 export const Platform: HDKComponent = (input) => (
   <HNode {...input}>
@@ -17,6 +18,7 @@ export const Platform: HDKComponent = (input) => (
       }}
     ></Grid>
     <Containers z={0} x={-20} />
+    <Giants p={[-10, 2, -10]} />
     <RampedGrid p={[8, 20, 64]} s={[1, 1, 1]} />
   </HNode>
 );

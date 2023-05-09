@@ -1,24 +1,24 @@
 import { HNode, Prefab, HDKComponent } from "@hiber3d/hdk-react";
-import { Stack } from "@hiber3d/hdk-react-components";
+import { SegmentedStack } from "@hiber3d/hdk-react-components";
 
 // trashcontainer_01 // trashcontainer_01_t1 //
 
 export const Containers: HDKComponent = (props) => (
   <HNode {...props} s={1.1}>
     <HNode p={[40, 0, 0]}>
-      <Stack
+      <SegmentedStack
         p={[0, 0, 0]}
         dim={4}
         segments={{ length: 2, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
+      ></SegmentedStack>
       <HNode p={[-20, 0, -10]}>
         <Prefab id="trashcontainer_01" rotY={70} s={2} />
         <Prefab id="trashcontainer_01_t1" p={[-16, 0, -24]} rotY={30} s={2} />
       </HNode>
-      <Stack
+      <SegmentedStack
         p={[0, 0, 12]}
         dim={4}
         segments={{ length: 2, direction: "UP" }}
@@ -27,8 +27,8 @@ export const Containers: HDKComponent = (props) => (
         )}
       >
         <Prefab id="en_p_shipping_container_02" y={4.0}></Prefab>
-      </Stack>
-      <Stack
+      </SegmentedStack>
+      <SegmentedStack
         p={[0, 0, 24]}
         dim={4}
         segments={{ length: 2, direction: "UP" }}
@@ -39,70 +39,70 @@ export const Containers: HDKComponent = (props) => (
         <Prefab id="en_p_shipping_container_02" y={4.0}>
           <Prefab id="en_p_shipping_container_01" y={4.0}></Prefab>
         </Prefab>
-      </Stack>
+      </SegmentedStack>
     </HNode>
     <HNode p={[28, 0, 0]}>
-      <Stack
+      <SegmentedStack
         p={[0, 0, 0]}
         dim={4}
         segments={{ length: 4, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
-      <Stack
+      ></SegmentedStack>
+      <SegmentedStack
         p={[0, 0, 12]}
         dim={4}
         segments={{ length: 2, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
-      <Stack
+      ></SegmentedStack>
+      <SegmentedStack
         p={[0, 0, 24]}
         dim={4}
         segments={{ length: 3, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
+      ></SegmentedStack>
     </HNode>
     <HNode p={[16, 0, 0]}>
-      <Stack
+      <SegmentedStack
         p={[0, 0, 0]}
         dim={4}
         segments={{ length: 4, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
-      <Stack
+      ></SegmentedStack>
+      <SegmentedStack
         p={[0, 0, 12]}
         dim={4}
         segments={{ length: 5, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
-      <Stack
+      ></SegmentedStack>
+      <SegmentedStack
         p={[0, 0, 24]}
         dim={4}
         segments={{ length: 5, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
+      ></SegmentedStack>
     </HNode>
     <Prefab id="en_p_shipping_container_01">
       <Prefab id="en_p_shipping_container_01" y={5}></Prefab>
-      <Stack
+      <SegmentedStack
         p={[0, 0, 12]}
         dim={4}
         segments={{ length: 3, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
+      ></SegmentedStack>
       <Prefab id="en_p_shipping_container_01" x={5} z={15}></Prefab>
       <Prefab
         id="en_p_shipping_container_01"
@@ -112,14 +112,14 @@ export const Containers: HDKComponent = (props) => (
         s={[0.8, 0.8, 1.2]}
         rotX={-30}
       ></Prefab>
-      <Stack
+      <SegmentedStack
         p={[0, 0, 24]}
         dim={4}
         segments={{ length: 4, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
         )}
-      ></Stack>
+      ></SegmentedStack>
       <Prefab id="en_p_grid_ramp_01" p={[0, 14, 16]} rotY={180} s={0.6} />
     </Prefab>
     <HNode p={[0, 40, -30]}>

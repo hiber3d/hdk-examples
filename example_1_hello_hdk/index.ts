@@ -42,7 +42,7 @@ root.add(
 root.add(create("en_p_bookshelf", { x: 15, y: 2, z: 4, rotY: 260 }));
 
 /**
- * ... and put two animated stacks of books in it.
+ * ... and put two animated SegmentedStacks of books in it.
  */
 root.add(
   create("books_01").animate(
