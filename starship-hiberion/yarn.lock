@@ -367,19 +367,19 @@
     nanoid "^4.0.2"
     ts-xor "^1.1.0"
 
-"@hiber3d/hdk-react-components@^0.2.15":
-  version "0.2.15"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react-components/-/hdk-react-components-0.2.15.tgz#06dbdd5d1bdd64bb5a48417d6cabf09b2dd81f3c"
-  integrity sha512-yTZ/7R/n3ICp6hP3+SsQK9UCvtjAOhs+axRp82ukDplnFs5zJkmIatz3jid4sIl/K19GiMm9HQCj1/d+baid/Q==
+"@hiber3d/hdk-react-components@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react-components/-/hdk-react-components-0.2.17.tgz#dffc24a5bd98f934e1e333fd4af825e7e2c761d4"
+  integrity sha512-CbBw854Q0juTKgikkIUdffXPewKbC1iGZnG+QyW4RK5bCnq6FA8XroEsL4BKtfwQidZi5aTBMvesaQDM4ER0mw==
   dependencies:
     "@hiber3d/hdk-core" "^0.3.1"
-    "@hiber3d/hdk-react" "^0.2.15"
+    "@hiber3d/hdk-react" "^0.2.17"
     "@hiber3d/hdk-utils" "^0.1.10"
 
-"@hiber3d/hdk-react@^0.2.15":
-  version "0.2.15"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react/-/hdk-react-0.2.15.tgz#0f5c7c693acbff40316ba5ae5d24c21b54d85654"
-  integrity sha512-nJT0eUmSrY+0PVHgnFWhr0FtB5ZUq+zq96yao/Fs08kvodMZYyOETIIDY8+xBNw8J+JeBhf731k6TyCgcGtHxA==
+"@hiber3d/hdk-react@^0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react/-/hdk-react-0.2.17.tgz#1a559f3bd55c59fcdb20e9c2ad2f69f16fecbb68"
+  integrity sha512-WDQ1ttil6jnL2GvRkp9w1UlhNGZJxDF7BaNYliJuzME1mbjLt0L6UWxr4KxTWGJ0R0H3tlA+RyjwZdlQEzcuUw==
   dependencies:
     "@hiber3d/hdk-core" "^0.3.1"
     "@hiber3d/hdk-utils" "^0.1.10"
