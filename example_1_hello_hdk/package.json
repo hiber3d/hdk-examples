@@ -1,5 +1,5 @@
 {
-  "name": "example_1_hello_hiberworld",
+  "name": "example_1_hello_hdk",
   "version": "0.0.1",
   "license": "MIT",
   "private": true,
@@ -8,8 +8,10 @@
     "upload": "hdk upload"
   },
   "dependencies": {
-    "@hiber3d/hdk-core": "latest",
-    "@hiber3d/hdk-cli": "latest",
-    "@hiber3d/hdk-utils": "latest"
+    "@hiber3d/hdk-cli": "^0.5.2",
+    "@hiber3d/hdk-core": "^0.4.0",
+    "@hiber3d/hdk-react": "^0.3.0",
+    "@hiber3d/hdk-react-components": "^0.3.0",
+    "@hiber3d/hdk-utils": "^0.2.0"
   }
 }
