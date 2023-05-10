@@ -345,35 +345,26 @@
   resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.2.1.tgz#79a96b18d63cb315302d5fb9ed3b0494cc4e81fd"
   integrity sha512-fPvylS2DMiLCM2/LsudyL3dqquWqTq9MpHLjw4HlFstCLzUhltXAo3UI90qQJeNa9/WoAWxvhweEE81Uk0Y5Gg==
 
-"@hiber3d/hdk-assets@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.4.0.tgz#e7ae835b0653a4c2b46677a0613f202d6e500c5b"
-  integrity sha512-kgODJ0UznRk6MOaoXS7T48BpnJjdK1skx7uGf5u8HN7AJ2+yP9+at+ulhNhk6+hTPdGMJxBz8Kqw9lNL2fvj5w==
-  dependencies:
-    vite "^4.3.5"
+"@hiber3d/hdk-assets@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.3.1.tgz#3aa0094b9ff7d43166ff38345edf7cfc22b84ed0"
+  integrity sha512-RKKT4I16lRTy6Tl4JBosyah/4plBFnRSqMbBVR/I8Sq9c1GhekF3cevQDC7bqlAk50iE3u+i/BSQukBmvbWVFA==
 
-"@hiber3d/hdk-cli@^0.5.2":
+"@hiber3d/hdk-cli@^0.5.1":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@hiber3d/hdk-cli/-/hdk-cli-0.5.2.tgz#3b7620a7d987698cd197ff5fd540f243c870dcb8"
   integrity sha512-XOSSlOSmo3mZpeZU1GcTl7L0bYma5IaG1FOOlJqOLU90W9XXcJuYM7DzMvCMkH+ANp05atvspjqBH9RWLh3aOw==
   dependencies:
     vite "^4.3.1"
 
-"@hiber3d/hdk-cli@latest":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-cli/-/hdk-cli-0.5.1.tgz#3761c8d719bbf9f9394cba7a8b6dc45c4779648f"
-  integrity sha512-b91cM01J+Iiv6PPeMCPtHc/JJ37wfMlXffurZSd33/S4DDXP8VQm9Eh4DlsHLvZRYvBftR/f5R7WhKIjRxokjg==
-  dependencies:
-    vite "^4.3.1"
-
-"@hiber3d/hdk-core@^0.2.1", "@hiber3d/hdk-core@latest":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.2.1.tgz#e17356f638088d1c4fb6f56465d51f4a366fa0cc"
-  integrity sha512-MijaaateA32vRFWDhGUBX78fryqQ8Si/HBxDjNmowGM9lUIwjNpTWIUb9rTkE0ps6weV8dDuH3Pqg83ZkEw16g==
+"@hiber3d/hdk-core@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.2.2.tgz#ae6bc14fba0e2a6a74926e0f48a80f0560806bde"
+  integrity sha512-uM8Fm7xDKZcPjfqCsBaKIzeL349qsAqPdj1VKK90tEd40m638ry9HCLxFO4g4+CrVyDIHAu7CoOv2UeHt1rFkw==
   dependencies:
     "@changesets/cli" "^2.26.1"
     "@hiber3d/hdk-assets" "^0.2.1"
-    "@hiberworld/engine" "^1.29.2"
+    "@hiberworld/engine" "^1.30.1"
     "@types/clone-deep" "^4.0.1"
     clone-deep "^4.0.1"
     gl-matrix "^3.4.3"
@@ -381,13 +372,13 @@
     nanoid "^4.0.2"
     ts-xor "^1.1.0"
 
-"@hiber3d/hdk-core@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.4.0.tgz#c4bcfea45c5c67e4faa66098f7f34150c1d0b007"
-  integrity sha512-osWzbGAdpYW+UiWE8/dUqBieYdNw7y40mUsrmokQk6D0IXNLPmuaAb/vgkN603lVNlJpz5tx2IQlCELpdrdMkw==
+"@hiber3d/hdk-core@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.3.2.tgz#b9e69ca659deff4243d794553a75c1ef3b83644e"
+  integrity sha512-HXB/56ausVNeQL/DwSa0+4jIaa3wN14n+2K1+YeWLVwCVe4aMqV9H+ss6MtfH7WmzBQuuXRY9GsDhxfVjFEgJA==
   dependencies:
     "@changesets/cli" "^2.26.1"
-    "@hiber3d/hdk-assets" "^0.4.0"
+    "@hiber3d/hdk-assets" "^0.3.1"
     "@hiberworld/engine" "^1.31.0"
     "@types/clone-deep" "^4.0.1"
     clone-deep "^4.0.1"
@@ -396,50 +387,36 @@
     nanoid "^4.0.2"
     ts-xor "^1.1.0"
 
-"@hiber3d/hdk-react-components@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react-components/-/hdk-react-components-0.3.0.tgz#099aef4f17565b29fcbea781619ecf303cd0cf3a"
-  integrity sha512-OGI44CIlEGkBbKmHywXuLjr7c0v9j65c9ATni3oS1njFnXmEeH9hIKSLlo0lx2Via4Fs17pN73Sx2Sm9G/+RYA==
+"@hiber3d/hdk-react-components@^0.2.9":
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react-components/-/hdk-react-components-0.2.18.tgz#93777305238131738839ea3be9bc483b2da391ae"
+  integrity sha512-z7Lb0tnlTGg2oyPRx8xeO8Fh/Cnc25pRRmpSgU2qAHXvGiyn1JH7WUekpCa4ddv+sH6kLTjK5cpBXZTBVEINGA==
   dependencies:
-    "@hiber3d/hdk-core" "^0.4.0"
-    "@hiber3d/hdk-react" "^0.3.0"
-    "@hiber3d/hdk-utils" "^0.2.0"
+    "@hiber3d/hdk-core" "^0.3.2"
+    "@hiber3d/hdk-react" "^0.2.18"
+    "@hiber3d/hdk-utils" "^0.1.11"
 
-"@hiber3d/hdk-react@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react/-/hdk-react-0.3.0.tgz#12891e39c5e71255c1f55eb4555bd05a46bec3ae"
-  integrity sha512-IEkQjr/tX28xmp71kXCiM9GnZCzFWY0lbdf4akoKjuXwyoSGf3vyOLtWfwGg1ks1v6LEeR/xEH0JM5n+ScPmhA==
+"@hiber3d/hdk-react@^0.2.18", "@hiber3d/hdk-react@^0.2.9":
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react/-/hdk-react-0.2.18.tgz#37d3f289b7ab9df94f29dbb0868241d03628a2cc"
+  integrity sha512-qtnyfphU5CwUmmzpwPtuuROHbuBXzO7jKBeNPsrFzYt2BRLXNAmKLaMQ0+sPpYf4C4sYfKBl+Ti2ZkaGzppWrw==
   dependencies:
-    "@hiber3d/hdk-core" "^0.4.0"
-    "@hiber3d/hdk-utils" "^0.2.0"
+    "@hiber3d/hdk-core" "^0.3.2"
+    "@hiber3d/hdk-utils" "^0.1.11"
     lodash-es "^4.17.21"
     react "^18.2.0"
     react-reconciler "^0.29.0"
 
-"@hiber3d/hdk-utils@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.2.0.tgz#ef08475f681b9d5fe5205295194b39415619b3d9"
-  integrity sha512-hlGX5OxsLgrHXiWVh9NfSODdnz6cQevrtNxyb3MlcmuDn5TIARxYP++R0yAg6ratT9otq1gNRJ+b0SaQh/o52g==
+"@hiber3d/hdk-utils@^0.1.11", "@hiber3d/hdk-utils@^0.1.7":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.1.11.tgz#056fdc3bec2546de9f77d807aa252f51da58a615"
+  integrity sha512-xrVvq29UL/vhi/wv18St3c0kqv/MdZSvbG1+IuuX94QYDgWLf0GX7YQdKE47CUTFFE622Da8aBL8qnm2I8pMYw==
   dependencies:
-    "@hiber3d/hdk-core" "^0.4.0"
+    "@hiber3d/hdk-core" "^0.3.2"
     add "^2.0.6"
     lodash-es "^4.17.21"
 
-"@hiber3d/hdk-utils@latest":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.1.5.tgz#5f8c695b54b1037eeb30a32556fb9ec3323289f2"
-  integrity sha512-S453WoOs6Ve4M0rS7KmiZy47lqygekKOnaZJnNE9D/7uWG6vx1asfqWI9gGjrNi6mV8xmeQ+JIaUm4z7m3+zpA==
-  dependencies:
-    "@hiber3d/hdk-core" "^0.2.1"
-    add "^2.0.6"
-    lodash-es "^4.17.21"
-
-"@hiberworld/engine@^1.29.2":
-  version "1.30.1"
-  resolved "https://registry.yarnpkg.com/@hiberworld/engine/-/engine-1.30.1.tgz#a7aa723c0b336cf1af9e1238198aac0ac6cab083"
-  integrity sha512-AfF7/sRrOeTQHydp8flNNyWcqql0G6tpGoglkoQdRfxyPNOAwRgSzcwGJFaezhfo7IgtyuD7o+R9mdY5iwsQoA==
-
-"@hiberworld/engine@^1.31.0":
+"@hiberworld/engine@^1.30.1", "@hiberworld/engine@^1.31.0":
   version "1.31.0"
   resolved "https://registry.yarnpkg.com/@hiberworld/engine/-/engine-1.31.0.tgz#785de3631d58de69d1a0e0cfd40bf98192be99ac"
   integrity sha512-8Ugw5UUmoIo/10CGxKQiK/PPUru9+tGRPyZV+pccHHPPQSQc1JtqElTqzE0Jk5Ze+LmpJAfux9+B+8hJI/fOsw==
@@ -513,6 +490,25 @@
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
+
+"@types/prop-types@*":
+  version "15.7.5"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
+  integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
+
+"@types/react@^18.2.5":
+  version "18.2.6"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.6.tgz#5cd53ee0d30ffc193b159d3516c8c8ad2f19d571"
+  integrity sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.3"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.3.tgz#cef09e3ec9af1d63d2a6cc5b383a737e24e6dcf5"
+  integrity sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==
 
 "@types/semver@^6.0.0":
   version "6.2.3"
@@ -722,6 +718,11 @@ cross-spawn@^5.1.0:
     lru-cache "^4.0.1"
     shebang-command "^1.2.0"
     which "^1.2.9"
+
+csstype@^3.0.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.2.tgz#1d4bf9d572f11c14031f0436e1c10bc1f571f50b"
+  integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
 csv-generate@^3.4.3:
   version "3.4.3"
@@ -1780,9 +1781,9 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 rollup@^3.21.0:
-  version "3.21.4"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.4.tgz#61af40f1d48d0d04fb20114af73db7367f7151fa"
-  integrity sha512-N5LxpvDolOm9ueiCp4NfB80omMDqb45ShtsQw2+OT3f11uJ197dv703NZvznYHP6RWR85wfxanXurXKG3ux2GQ==
+  version "3.21.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.6.tgz#f5649ccdf8fcc7729254faa457cbea9547eb86db"
+  integrity sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2089,17 +2090,6 @@ validate-npm-package-license@^3.0.1:
     spdx-expression-parse "^3.0.0"
 
 vite@^4.3.1:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.4.tgz#1c518d763d5a700d890c3a19ab59220f06e7a7d5"
-  integrity sha512-f90aqGBoxSFxWph2b39ae2uHAxm5jFBBdnfueNxZAT1FTpM13ccFQExCaKbR2xFW5atowjleRniQ7onjJ22QEg==
-  dependencies:
-    esbuild "^0.17.5"
-    postcss "^8.4.23"
-    rollup "^3.21.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@^4.3.5:
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.5.tgz#3871fe0f4b582ea7f49a85386ac80e84826367d9"
   integrity sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA==
