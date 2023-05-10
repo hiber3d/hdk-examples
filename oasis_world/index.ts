@@ -6,7 +6,7 @@ if (import.meta.hot) {
 
 const world = create("en_p_jungle_grass_01", { y: -3 });
 
-create("large_sand_plane_01", { transform: { pos: [0, -2, -10] } }).addTo(
+create("large_sand_plane_01", { transform: { pos: [0, -2.5, -10] } }).addTo(
   world
 );
 
