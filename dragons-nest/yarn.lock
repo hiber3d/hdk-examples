@@ -345,14 +345,14 @@
   resolved "https://registry.npmjs.org/@hiber3d/hdk-assets/-/hdk-assets-0.2.1.tgz"
   integrity sha512-fPvylS2DMiLCM2/LsudyL3dqquWqTq9MpHLjw4HlFstCLzUhltXAo3UI90qQJeNa9/WoAWxvhweEE81Uk0Y5Gg==
 
-"@hiber3d/hdk-cli@latest":
+"@hiber3d/hdk-cli@^0.5.1":
   version "0.5.1"
   resolved "https://registry.npmjs.org/@hiber3d/hdk-cli/-/hdk-cli-0.5.1.tgz"
   integrity sha512-b91cM01J+Iiv6PPeMCPtHc/JJ37wfMlXffurZSd33/S4DDXP8VQm9Eh4DlsHLvZRYvBftR/f5R7WhKIjRxokjg==
   dependencies:
     vite "^4.3.1"
 
-"@hiber3d/hdk-core@^0.2.2", "@hiber3d/hdk-core@latest":
+"@hiber3d/hdk-core@^0.2.2":
   version "0.2.2"
   resolved "https://registry.npmjs.org/@hiber3d/hdk-core/-/hdk-core-0.2.2.tgz"
   integrity sha512-uM8Fm7xDKZcPjfqCsBaKIzeL349qsAqPdj1VKK90tEd40m638ry9HCLxFO4g4+CrVyDIHAu7CoOv2UeHt1rFkw==
@@ -367,7 +367,7 @@
     nanoid "^4.0.2"
     ts-xor "^1.1.0"
 
-"@hiber3d/hdk-react-components@latest":
+"@hiber3d/hdk-react-components@^0.2.9":
   version "0.2.9"
   resolved "https://registry.npmjs.org/@hiber3d/hdk-react-components/-/hdk-react-components-0.2.9.tgz"
   integrity sha512-NvBZ0RjMZRV+1BHtrj8ggFy2YsVK3pINExZH0OKqvLoIQHoDgHQpARVL6JSfNa6bDcKOC9jNMMeKgQrpzZBWmg==
@@ -378,7 +378,7 @@
     react "^18.2.0"
     react-reconciler "^0.29.0"
 
-"@hiber3d/hdk-react@^0.2.9", "@hiber3d/hdk-react@latest":
+"@hiber3d/hdk-react@^0.2.9":
   version "0.2.9"
   resolved "https://registry.npmjs.org/@hiber3d/hdk-react/-/hdk-react-0.2.9.tgz"
   integrity sha512-p6Y/h4forQ2zN1PQfV/OKpzOnhKTmDVVssArWyxgB+sm9HeTieI4wIFeA0twVnnU3h7XiE036lG5H9csdeiXbw==
@@ -388,7 +388,7 @@
     react "^18.2.0"
     react-reconciler "^0.29.0"
 
-"@hiber3d/hdk-utils@^0.1.7", "@hiber3d/hdk-utils@latest":
+"@hiber3d/hdk-utils@^0.1.7":
   version "0.1.7"
   resolved "https://registry.npmjs.org/@hiber3d/hdk-utils/-/hdk-utils-0.1.7.tgz"
   integrity sha512-Epgk+/YDAJE0w97LqdwuP9gjXLcGK7V11YpL3OqcRPNZIlnibwKnhrEhnGUO8l+xlTDWhA9ml+OkTHKgwkWYbQ==
