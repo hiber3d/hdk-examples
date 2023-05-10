@@ -352,21 +352,14 @@
   dependencies:
     vite "^4.3.5"
 
-"@hiber3d/hdk-cli@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-cli/-/hdk-cli-0.5.2.tgz#3b7620a7d987698cd197ff5fd540f243c870dcb8"
-  integrity sha512-XOSSlOSmo3mZpeZU1GcTl7L0bYma5IaG1FOOlJqOLU90W9XXcJuYM7DzMvCMkH+ANp05atvspjqBH9RWLh3aOw==
-  dependencies:
-    vite "^4.3.1"
-
-"@hiber3d/hdk-cli@latest":
+"@hiber3d/hdk-cli@^0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@hiber3d/hdk-cli/-/hdk-cli-0.5.1.tgz#3761c8d719bbf9f9394cba7a8b6dc45c4779648f"
   integrity sha512-b91cM01J+Iiv6PPeMCPtHc/JJ37wfMlXffurZSd33/S4DDXP8VQm9Eh4DlsHLvZRYvBftR/f5R7WhKIjRxokjg==
   dependencies:
     vite "^4.3.1"
 
-"@hiber3d/hdk-core@^0.2.1", "@hiber3d/hdk-core@latest":
+"@hiber3d/hdk-core@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.2.1.tgz#e17356f638088d1c4fb6f56465d51f4a366fa0cc"
   integrity sha512-MijaaateA32vRFWDhGUBX78fryqQ8Si/HBxDjNmowGM9lUIwjNpTWIUb9rTkE0ps6weV8dDuH3Pqg83ZkEw16g==
@@ -416,21 +409,21 @@
     react "^18.2.0"
     react-reconciler "^0.29.0"
 
+"@hiber3d/hdk-utils@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.1.5.tgz#5f8c695b54b1037eeb30a32556fb9ec3323289f2"
+  integrity sha512-S453WoOs6Ve4M0rS7KmiZy47lqygekKOnaZJnNE9D/7uWG6vx1asfqWI9gGjrNi6mV8xmeQ+JIaUm4z7m3+zpA==
+  dependencies:
+    "@hiber3d/hdk-core" "^0.2.1"
+    add "^2.0.6"
+    lodash-es "^4.17.21"
+
 "@hiber3d/hdk-utils@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.2.0.tgz#ef08475f681b9d5fe5205295194b39415619b3d9"
   integrity sha512-hlGX5OxsLgrHXiWVh9NfSODdnz6cQevrtNxyb3MlcmuDn5TIARxYP++R0yAg6ratT9otq1gNRJ+b0SaQh/o52g==
   dependencies:
     "@hiber3d/hdk-core" "^0.4.0"
-    add "^2.0.6"
-    lodash-es "^4.17.21"
-
-"@hiber3d/hdk-utils@latest":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.1.5.tgz#5f8c695b54b1037eeb30a32556fb9ec3323289f2"
-  integrity sha512-S453WoOs6Ve4M0rS7KmiZy47lqygekKOnaZJnNE9D/7uWG6vx1asfqWI9gGjrNi6mV8xmeQ+JIaUm4z7m3+zpA==
-  dependencies:
-    "@hiber3d/hdk-core" "^0.2.1"
     add "^2.0.6"
     lodash-es "^4.17.21"
 
