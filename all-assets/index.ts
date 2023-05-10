@@ -39,7 +39,12 @@ const optionalIds = [
 ];
 
 // Add ID if specific prefabs should be completely excluded
-const excludeIds = ["gpl_mechanic_count_down_timer_01"];
+const excludeIds = [
+  "gpl_mechanic_count_down_timer_01",
+  "flowers_01",
+  "flowers_02",
+  "gpl_death_ray_01",
+];
 
 // Adding all assets not included in "excludeIds"
 let z = 20; // Increase to have more space between each row to acommadate larger assets
