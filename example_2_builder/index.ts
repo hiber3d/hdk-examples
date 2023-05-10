@@ -37,7 +37,7 @@ const root = builder("grass_plane_01").add(
  * See Example 6 for a more advanced use of the InfoPanel.
  */
 builder("ancient_urn_01")
-  .setTransform({ pos: [1, randomY, 3] })
+  .setTransform({ pos: [1, randomY + 3, 3] })
   .setName("my_urn")
   .setInfoPanel({
     header: "I'm a urn",
