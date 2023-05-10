@@ -4,7 +4,12 @@
  * Refer to Example 1 for information about basic code structure.
  */
 
-import { renderScene, create, HNodeWithMethods } from "@hiber3d/hdk-core";
+import {
+  renderScene,
+  create,
+  HNodeWithMethods,
+  Rotation,
+} from "@hiber3d/hdk-core";
 import {
   builder,
   inCircle,
@@ -42,7 +47,7 @@ const root = create("grass_plane_01").add(
 root.addMany(4, (index, total) => {
   const progression = index / total;
 
-  const r = [0, 0, 0];
+  const r: Rotation = [0, 0, 0];
   let header;
 
   if (index > 0) {
@@ -51,7 +56,7 @@ root.addMany(4, (index, total) => {
 
     header = "Rotated around the " + ["X", "Y", "Z"][i] + " axis";
   } else {
-    header = "Not rotated along any axix";
+    header = "Not rotated along any axis";
   }
 
   return builder("ancient_urn_01", {
