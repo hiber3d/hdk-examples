@@ -36,8 +36,8 @@ jobs:
         id: changes
         with:
           filters: |
-            example_1_hello_hiberworld:
-              - 'example_1_hello_hiberworld/**'
+            example_1_hello_hdk:
+              - 'example_1_hello_hdk/**'
             example_2_builder:
               - 'example_2_builder/**'            
             example_3_game_mechanics:
@@ -50,9 +50,6 @@ jobs:
               - 'example_6_media_and_interaction/**'               
             example_7_signals:
               - 'example_7_signals/**'
-
-            all-assets:
-              - 'all-assets/**'
             oasis_world:
               - 'oasis_world/**'            
             dragons-nest:
@@ -76,11 +73,11 @@ jobs:
         with:
           world: "all-assets"
 
-      - name: Upload 'example_1_hello_hiberworld'
-        if: steps.changes.outputs.example_1_hello_hiberworld == 'true'
+      - name: Upload 'example_1_hello_hdk'
+        if: steps.changes.outputs.example_1_hello_hdk == 'true'
         uses: HiberWorld/code-kit-upload@latest
         with:
-          world: "example_1_hello_hiberworld"
+          world: "example_1_hello_hdk"
 
       - name: Upload 'example_2_builder'
         if: steps.changes.outputs.example_2_builder == 'true'
@@ -124,11 +121,11 @@ jobs:
         with:
           world: "oasis_world"
 
-      # - name: Upload 'dragons-nest'
-      #   if: steps.changes.outputs.dragons-nest == 'true'
-      #   uses: HiberWorld/code-kit-upload@latest
-      #   with:
-      #     world: "dragons-nest"
+      - name: Upload 'dragons-nest'
+        if: steps.changes.outputs.dragons-nest == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "dragons-nest"
 
       - name: Upload 'kraken-battle'
         if: steps.changes.outputs.kraken-battle == 'true'
