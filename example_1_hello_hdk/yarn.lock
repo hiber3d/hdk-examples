@@ -340,11 +340,6 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.18.tgz#3a8e57153905308db357fd02f57c180ee3a0a1fa"
   integrity sha512-qU25Ma1I3NqTSHJUOKi9sAH1/Mzuvlke0ioMJRthLXKm7JiSKVwFghlGbDLOO2sARECGhja4xYfRAZNPAkooYg==
 
-"@hiber3d/hdk-assets@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.2.1.tgz#79a96b18d63cb315302d5fb9ed3b0494cc4e81fd"
-  integrity sha512-fPvylS2DMiLCM2/LsudyL3dqquWqTq9MpHLjw4HlFstCLzUhltXAo3UI90qQJeNa9/WoAWxvhweEE81Uk0Y5Gg==
-
 "@hiber3d/hdk-assets@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.4.0.tgz#e7ae835b0653a4c2b46677a0613f202d6e500c5b"
@@ -358,28 +353,6 @@
   integrity sha512-XOSSlOSmo3mZpeZU1GcTl7L0bYma5IaG1FOOlJqOLU90W9XXcJuYM7DzMvCMkH+ANp05atvspjqBH9RWLh3aOw==
   dependencies:
     vite "^4.3.1"
-
-"@hiber3d/hdk-cli@latest":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-cli/-/hdk-cli-0.5.1.tgz#3761c8d719bbf9f9394cba7a8b6dc45c4779648f"
-  integrity sha512-b91cM01J+Iiv6PPeMCPtHc/JJ37wfMlXffurZSd33/S4DDXP8VQm9Eh4DlsHLvZRYvBftR/f5R7WhKIjRxokjg==
-  dependencies:
-    vite "^4.3.1"
-
-"@hiber3d/hdk-core@^0.2.1", "@hiber3d/hdk-core@latest":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.2.1.tgz#e17356f638088d1c4fb6f56465d51f4a366fa0cc"
-  integrity sha512-MijaaateA32vRFWDhGUBX78fryqQ8Si/HBxDjNmowGM9lUIwjNpTWIUb9rTkE0ps6weV8dDuH3Pqg83ZkEw16g==
-  dependencies:
-    "@changesets/cli" "^2.26.1"
-    "@hiber3d/hdk-assets" "^0.2.1"
-    "@hiberworld/engine" "^1.29.2"
-    "@types/clone-deep" "^4.0.1"
-    clone-deep "^4.0.1"
-    gl-matrix "^3.4.3"
-    lodash-es "^4.17.21"
-    nanoid "^4.0.2"
-    ts-xor "^1.1.0"
 
 "@hiber3d/hdk-core@^0.4.0":
   version "0.4.0"
@@ -424,20 +397,6 @@
     "@hiber3d/hdk-core" "^0.4.0"
     add "^2.0.6"
     lodash-es "^4.17.21"
-
-"@hiber3d/hdk-utils@latest":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.1.5.tgz#5f8c695b54b1037eeb30a32556fb9ec3323289f2"
-  integrity sha512-S453WoOs6Ve4M0rS7KmiZy47lqygekKOnaZJnNE9D/7uWG6vx1asfqWI9gGjrNi6mV8xmeQ+JIaUm4z7m3+zpA==
-  dependencies:
-    "@hiber3d/hdk-core" "^0.2.1"
-    add "^2.0.6"
-    lodash-es "^4.17.21"
-
-"@hiberworld/engine@^1.29.2":
-  version "1.30.1"
-  resolved "https://registry.yarnpkg.com/@hiberworld/engine/-/engine-1.30.1.tgz#a7aa723c0b336cf1af9e1238198aac0ac6cab083"
-  integrity sha512-AfF7/sRrOeTQHydp8flNNyWcqql0G6tpGoglkoQdRfxyPNOAwRgSzcwGJFaezhfo7IgtyuD7o+R9mdY5iwsQoA==
 
 "@hiberworld/engine@^1.31.0":
   version "1.31.0"
@@ -1780,9 +1739,9 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 rollup@^3.21.0:
-  version "3.21.4"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.4.tgz#61af40f1d48d0d04fb20114af73db7367f7151fa"
-  integrity sha512-N5LxpvDolOm9ueiCp4NfB80omMDqb45ShtsQw2+OT3f11uJ197dv703NZvznYHP6RWR85wfxanXurXKG3ux2GQ==
+  version "3.21.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.6.tgz#f5649ccdf8fcc7729254faa457cbea9547eb86db"
+  integrity sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -2088,18 +2047,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite@^4.3.1:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.4.tgz#1c518d763d5a700d890c3a19ab59220f06e7a7d5"
-  integrity sha512-f90aqGBoxSFxWph2b39ae2uHAxm5jFBBdnfueNxZAT1FTpM13ccFQExCaKbR2xFW5atowjleRniQ7onjJ22QEg==
-  dependencies:
-    esbuild "^0.17.5"
-    postcss "^8.4.23"
-    rollup "^3.21.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@^4.3.5:
+vite@^4.3.1, vite@^4.3.5:
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.5.tgz#3871fe0f4b582ea7f49a85386ac80e84826367d9"
   integrity sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA==
