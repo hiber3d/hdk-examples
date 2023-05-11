@@ -18,6 +18,23 @@ const World = () => {
       </SegmentedStack> */}
       <Wagyu>
         <StarshipHiberion />
+        <StarshipHiberion
+          interior={false}
+          x={600}
+          z={-600}
+          y={40}
+          scale={0.3}
+          rotY={20}
+          rotZ={20}
+        />
+        <StarshipHiberion
+          interior={false}
+          x={-100}
+          z={50}
+          y={100}
+          scale={0.2}
+          rotZ={-20}
+        />
       </Wagyu>
     </HNode>
   );
