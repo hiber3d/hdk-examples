@@ -8,7 +8,7 @@ export const Containers: HDKComponent = (props) => (
     <HNode p={[40, 0, 0]}>
       <SegmentedStack
         p={[0, 0, 0]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 2, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -20,7 +20,7 @@ export const Containers: HDKComponent = (props) => (
       </HNode>
       <SegmentedStack
         p={[0, 0, 12]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 2, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -30,7 +30,7 @@ export const Containers: HDKComponent = (props) => (
       </SegmentedStack>
       <SegmentedStack
         p={[0, 0, 24]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 2, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -44,7 +44,7 @@ export const Containers: HDKComponent = (props) => (
     <HNode p={[28, 0, 0]}>
       <SegmentedStack
         p={[0, 0, 0]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 4, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -52,7 +52,7 @@ export const Containers: HDKComponent = (props) => (
       ></SegmentedStack>
       <SegmentedStack
         p={[0, 0, 12]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 2, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -60,7 +60,7 @@ export const Containers: HDKComponent = (props) => (
       ></SegmentedStack>
       <SegmentedStack
         p={[0, 0, 24]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 3, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -70,7 +70,7 @@ export const Containers: HDKComponent = (props) => (
     <HNode p={[16, 0, 0]}>
       <SegmentedStack
         p={[0, 0, 0]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 4, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -78,7 +78,7 @@ export const Containers: HDKComponent = (props) => (
       ></SegmentedStack>
       <SegmentedStack
         p={[0, 0, 12]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 5, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -86,7 +86,7 @@ export const Containers: HDKComponent = (props) => (
       ></SegmentedStack>
       <SegmentedStack
         p={[0, 0, 24]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 5, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -97,7 +97,7 @@ export const Containers: HDKComponent = (props) => (
       <Prefab id="en_p_shipping_container_01" y={5}></Prefab>
       <SegmentedStack
         p={[0, 0, 12]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 3, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>
@@ -114,7 +114,7 @@ export const Containers: HDKComponent = (props) => (
       ></Prefab>
       <SegmentedStack
         p={[0, 0, 24]}
-        dim={4}
+        dimensions={4}
         segments={{ length: 4, direction: "UP" }}
         renderItem={(i) => (
           <Prefab id="en_p_shipping_container_01" s={[1, 0.8, 1]}></Prefab>

@@ -24,7 +24,7 @@ export const GravityWell: HDKComponent<GravityWellOpts> = (input) => {
       </Prefab>
       <SegmentedStack
         {...props}
-        dim={35}
+        dimensions={35}
         segments={{ length: 4, direction: "IN" }}
         renderItem={() => (
           <Prefab id="en_m_tunnel_bridge_01" s={[1, 1.3, 3]} scaleX={2} />

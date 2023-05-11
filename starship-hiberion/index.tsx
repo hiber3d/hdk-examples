@@ -10,7 +10,7 @@ const World = () => {
   return (
     <HNode>
       {/* <SegmentedStack
-        dim={5}
+        dimensions={5}
         segments={{ length: 4, direction: "IN" }}
         renderItem={() => <Prefab id="cube_01" />}
       >

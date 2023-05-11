@@ -22,7 +22,7 @@ export const MeatGrinder: HDKComponent = (props) => {
 
         <HNode y={-10}>
           <SegmentedStack
-            dim={7.1}
+            dimensions={7.1}
             segments={[{ length: 4, direction: "DOWN" }]}
             renderItem={(index) => (
               <HNode>

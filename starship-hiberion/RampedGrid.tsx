@@ -5,7 +5,7 @@ import { HDKComponent, HNode, Prefab } from "@hiber3d/hdk-react";
 export const RampedGrid: HDKComponent = (props) => (
   <HNode {...props}>
     <SegmentedStack
-      dim={[5, 3, 3]}
+      dimensions={[5, 3, 3]}
       segments={{ length: 2, direction: "LEFT" }}
       renderItem={() => (
         <Ramp

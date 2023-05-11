@@ -35,13 +35,17 @@ const Axis: HDKComponent = (props) => {
 };
 
 export const Hub: HDKComponent = (props) => (
-  <Spinning duration={100} r={[90, 0, 0]} p={[0, 0, -16]}>
-    <GravityWell p={[0, 0, 30]} hologram="hologram_01_hibert"></GravityWell>
-    <GravityWell
-      r={[0, 180, 0]}
-      p={[0, 0, -30]}
-      hologram="hologram_01_hibertina"
-    ></GravityWell>
-    <Axis />
-  </Spinning>
+  <HNode {...props}>
+    <HNode r={[90, 0, 0]}>
+      <Spinning duration={100}>
+        <GravityWell p={[0, 0, 30]} hologram="hologram_01_hibert"></GravityWell>
+        <GravityWell
+          r={[0, 180, 0]}
+          p={[0, 0, -30]}
+          hologram="hologram_01_hibertina"
+        ></GravityWell>
+        <Axis />
+      </Spinning>
+    </HNode>
+  </HNode>
 );
