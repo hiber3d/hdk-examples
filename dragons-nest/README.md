@@ -1,6 +1,6 @@
 # dragons-nest
 
-This is an example world created by @MarvelousFormula9 and @fille1000, showing how to generate content procedurally with Hiber Hiber3D HDK.
+This is an example world created by @MarvelousFormula9 and @fille1000, showing how to generate content procedurally with Hiber3D HDK.
 
 There is a Dragon's Nest at the top of the tree, and the dragon can be KILLED!
 
