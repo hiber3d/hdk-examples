@@ -54,6 +54,8 @@ jobs:
               - 'oasis_world/**'            
             dragons-nest:
               - 'dragons-nest/**'
+            starship-hiberion:
+              - 'starship-hiberion/**'
             find-the-path:
               - 'find-the-path/**'
             kraken-battle:
@@ -126,6 +128,12 @@ jobs:
         uses: HiberWorld/code-kit-upload@latest
         with:
           world: "dragons-nest"
+
+      - name: Upload 'starship-hiberion'
+        if: steps.changes.outputs.starship-hiberion == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "starship-hiberion"
 
       - name: Upload 'kraken-battle'
         if: steps.changes.outputs.kraken-battle == 'true'
