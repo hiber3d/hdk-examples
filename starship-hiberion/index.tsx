@@ -29,10 +29,10 @@ const World = () => {
         />
         <StarshipHiberion
           interior={false}
-          x={-100}
-          z={50}
+          x={100}
+          z={100}
           y={100}
-          scale={0.2}
+          scale={0.1}
           rotZ={-20}
         />
       </Wagyu>

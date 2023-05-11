@@ -1,22 +1,11 @@
-# the-grid
+# starhip-hiberion
 
-This is a [Hiber Code-Kit](https://github.com/HiberWorld/codekit) project created using [create-hiber-world](https://github.com/HiberWorld/codekit/packages/create-hiber-world)
+This is an example world created by @Stefan, showing how to generate content procedurally with Hiber3D HDK.
 
-Please see [Code-Kit Docs](https://hiberworld.github.io/codekit/) for full documentation.
+Please see Hiber3D HDK Docs for full documentation:
+https://developer.hiber3d.com/docs/
 
-Install with this command:
-
-```bash
-npm install
-```
-
-Then run with:
-
-```bash
-npm run dev
-```
-
-and enjoy the hiber experience at
-(http://localhost:5173/)
+The source code is available at
+https://github.com/hiber3d/hdk-examples/tree/main/starship-hiberion
 
 Happy coding!

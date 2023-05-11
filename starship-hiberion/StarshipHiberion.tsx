@@ -78,7 +78,7 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                     <Prefab id="gpl_spawn_point_01" y={2} rotY={0} />
                   </Prefab>
                 </HNode> */}
-                {debug && (
+                {interior && debug && (
                   <HNode x={200} y={0} z={0} rotY={90}>
                     <Prefab id="hiberpunk_decoration_disc_t1" s={2}>
                       <Prefab id="gpl_spawn_point_01" y={2} rotY={0} />
@@ -127,7 +127,7 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                         {interior && <Djungle />}
                         {interior && <RoofWalkway p={[0, 10, 73]} />}
                         {interior && <VideoPanels p={[0, 21, 70]} />}
-                        {debug && (
+                        {interior && debug && (
                           <HNode x={0} y={-15} z={20} rotY={180}>
                             <Prefab id="hiberpunk_decoration_disc_t1" s={2}>
                               <Prefab id="gpl_spawn_point_01" y={2} rotY={0} />
