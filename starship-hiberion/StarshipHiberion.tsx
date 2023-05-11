@@ -22,9 +22,12 @@ import { VideoPanel } from "@hiber3d/hdk-react-components";
 
 const debug = true;
 
-export const StarshipHiberion = ({ interior = true }) => {
+export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
+  props
+) => {
+  const { interior = true } = props;
   return (
-    <HNode s={1}>
+    <HNode {...props}>
       <HNode>
         <Prefab
           id="en_m_hiberpunk_building_01_top"
