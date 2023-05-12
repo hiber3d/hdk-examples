@@ -26,10 +26,10 @@ const Sentinel = (props: {
       <Hovering magnitude={5} rotZ={90}>
         <Spinning axis="z">
           <Spinning axis="y">
-            <Prefab id="glowing_orb_01" s={[1, 1, 1]} />
+            <Prefab id="glowing_orb_01" scale={[1, 1, 1]} />
           </Spinning>
           <Spinning axis="y">
-            <Prefab id="h_sawblade_01" s={[1, 1, 1]} y={0.5} />
+            <Prefab id="h_sawblade_01" scale={[1, 1, 1]} y={0.5} />
           </Spinning>
         </Spinning>
       </Hovering>

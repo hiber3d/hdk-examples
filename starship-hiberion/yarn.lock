@@ -340,17 +340,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.18.tgz#3a8e57153905308db357fd02f57c180ee3a0a1fa"
   integrity sha512-qU25Ma1I3NqTSHJUOKi9sAH1/Mzuvlke0ioMJRthLXKm7JiSKVwFghlGbDLOO2sARECGhja4xYfRAZNPAkooYg==
 
-"@hiber3d/hdk-assets@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.4.1.tgz#62ee9b47b5ed20ff7fdc6ddea6d98087647b72f2"
-  integrity sha512-A+c/f+ECkMjWSoksg5owztZQu+1M5LSmzlGEmx7+aAzLmBImaT1lzu02qJVrJ/rEabpuyWQDUIkzGnqCrG3bxQ==
-  dependencies:
-    vite "^4.3.5"
-
-"@hiber3d/hdk-assets@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.4.2.tgz#3be2cddb916a137d8e3b7eaf66cb7c9aab977a24"
-  integrity sha512-w5h51NVGIl2ob3Ae9XS5+ie0xsL1bAZGAkOrfVMz3Hx8KIRBtYQeT9R54wEVp8RgXpJzJ8g+/Tu8fWrvid5+1w==
+"@hiber3d/hdk-assets@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-assets/-/hdk-assets-0.4.3.tgz#e2ef58522a86dcdfd0516506e5b9266db31b17b7"
+  integrity sha512-v4sVKuerBbkbkxB8vUqe2ew+XdGHKhkfIa3MJFIUMK781IAOarKLgzh7FylSit78AH9gVLmJRbdltm7uFok9wA==
   dependencies:
     vite "^4.3.5"
 
@@ -361,13 +354,13 @@
   dependencies:
     vite "^4.3.1"
 
-"@hiber3d/hdk-core@^0.4.3":
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.4.3.tgz#c7a62fb0fbf77331a2db8390d8d5b2b77e8abe74"
-  integrity sha512-9sXXiML9KrAhYGJ93GjV5idLer4scHsYX1+wmFAGIJ2ZxWnAmsa07kxN+qs3XFPHTNc/mfWWCa32UVnv4GDopg==
+"@hiber3d/hdk-core@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-core/-/hdk-core-0.4.5.tgz#20106e36cd50056ee003c3bd2bea94aee35aae75"
+  integrity sha512-KFtrDZASClfV9vKN/t6Heb9QDjEMDl0lcfL9nUckJvl9dRa+vBUhBV/tZCgg2wYLgQ2XcNA6YzjJBGy/MFLVxw==
   dependencies:
     "@changesets/cli" "^2.26.1"
-    "@hiber3d/hdk-assets" "^0.4.2"
+    "@hiber3d/hdk-assets" "^0.4.3"
     "@hiberworld/engine" "^1.31.0"
     "@types/clone-deep" "^4.0.1"
     clone-deep "^4.0.1"
@@ -376,32 +369,33 @@
     nanoid "^4.0.2"
     ts-xor "^1.1.0"
 
-"@hiber3d/hdk-react-components@^0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react-components/-/hdk-react-components-0.3.5.tgz#9b7daf4bbaa5294bb73062972b2e1e5e655522a8"
-  integrity sha512-K4cl/ls7rBDf+j/MHvMgqYOjEAhHbu16FkdBHbqklfC7ffnIVioPMW5rMT3VPCHghrT3h1DLLzQrwmAYIHIF5A==
+"@hiber3d/hdk-react-components@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react-components/-/hdk-react-components-0.3.7.tgz#7ccb837442670e577a88d2bb5eaa9efc4799442f"
+  integrity sha512-CbuuD4aKMl5vnyP80RmZyIKRW40G+Qror2ULATsxcVPd/4Mn6fgBh6HQk6vTiVEAD2o+EZgp5P2xB2l4LpQJGQ==
   dependencies:
-    "@hiber3d/hdk-core" "^0.4.3"
-    "@hiber3d/hdk-react" "^0.3.5"
-    "@hiber3d/hdk-utils" "^0.2.3"
+    "@hiber3d/hdk-core" "^0.4.5"
+    "@hiber3d/hdk-react" "^0.3.7"
+    "@hiber3d/hdk-utils" "^0.2.5"
 
-"@hiber3d/hdk-react@^0.3.5":
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react/-/hdk-react-0.3.5.tgz#c547efac8cd89514462f92d4f131424c5b01c137"
-  integrity sha512-/37WLrJdV0iYypUbmpHs8msqr16MWCLeUqc0l+5sk118qJZtqtAYGfUCsXDu4C64/8dQbYAuf6dEmmcabi0uPw==
+"@hiber3d/hdk-react@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-react/-/hdk-react-0.3.7.tgz#9dbcb75092184f2f048cc22dee7c16e24f64af26"
+  integrity sha512-SnRiM1q6yNXqzdY2wZz90UbuQ1/gtTRFUcnkutk5YyTI8L2ybMWrQ5q/Q02TpcJuvqwyYUibk1d7eZB6U+bavA==
   dependencies:
-    "@hiber3d/hdk-core" "^0.4.3"
-    "@hiber3d/hdk-utils" "^0.2.3"
+    "@hiber3d/hdk-core" "^0.4.5"
+    "@hiber3d/hdk-utils" "^0.2.5"
+    "@types/react" "18.0.28"
     lodash-es "^4.17.21"
     react "^18.2.0"
     react-reconciler "^0.29.0"
 
-"@hiber3d/hdk-utils@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.2.3.tgz#14f115d6a31678e391cabbab3d174b3fc5975c09"
-  integrity sha512-QQybhs30/5XSLzzZkfwRcv9vMWMzjRblK4ysgPPHEGI9wOMuZKGxkOMwJoD+xqMSpLXdqCm5IWfw3Ob8Xoi6Aw==
+"@hiber3d/hdk-utils@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@hiber3d/hdk-utils/-/hdk-utils-0.2.5.tgz#430b6d6fbeef87a90fa0f32492a0149139ba5e81"
+  integrity sha512-nqhbz93wjoMB+6vjxtiEL1xCAGQbp4KnrfZxgPk/2UnCw1lG9J+DlsNXYppAtbc+9h/k8M9ilnIIWLxTS1eQ4A==
   dependencies:
-    "@hiber3d/hdk-core" "^0.4.3"
+    "@hiber3d/hdk-core" "^0.4.5"
     add "^2.0.6"
     lodash-es "^4.17.21"
 
@@ -485,10 +479,19 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react@^18.2.1":
-  version "18.2.4"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.4.tgz#970e6d56f6d3fd8bd2cb1d1f042aef1d0426d08e"
-  integrity sha512-IvAIhJTmKAAJmCIcaa6+5uagjyh+9GvcJ/thPZcw+i+vx+22eHlTy2Q1bJg/prES57jehjebq9DnIhOTtIhmLw==
+"@types/react@18.0.28":
+  version "18.0.28"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.28.tgz#accaeb8b86f4908057ad629a26635fe641480065"
+  integrity sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.2.6":
+  version "18.2.6"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.6.tgz#5cd53ee0d30ffc193b159d3516c8c8ad2f19d571"
+  integrity sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1770,9 +1773,9 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 rollup@^3.21.0:
-  version "3.21.4"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.4.tgz#61af40f1d48d0d04fb20114af73db7367f7151fa"
-  integrity sha512-N5LxpvDolOm9ueiCp4NfB80omMDqb45ShtsQw2+OT3f11uJ197dv703NZvznYHP6RWR85wfxanXurXKG3ux2GQ==
+  version "3.21.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.6.tgz#f5649ccdf8fcc7729254faa457cbea9547eb86db"
+  integrity sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==
   optionalDependencies:
     fsevents "~2.3.2"
 
