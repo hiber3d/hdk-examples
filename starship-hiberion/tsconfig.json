@@ -4,7 +4,6 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "types": ["vitest/globals", "vite/client"],
     "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,
