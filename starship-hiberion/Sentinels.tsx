@@ -13,6 +13,7 @@ const Sentinel = (props: {
       <Animation
         animation={{
           z: [-60, -30, 0, 30, 60, 100],
+          x: [0, -5, 0, 5, 10, 5],
           duration: props.duration,
           loop: "REVERSE",
           startAt: props.startAt,
@@ -35,7 +36,7 @@ const Sentinel = (props: {
 };
 
 export const Sentinels = () => (
-  <HNode>
+  <HNode rotZ={90}>
     <Sentinel y={0} z={0} startAt={0} duration={2} />
     <Sentinel y={1} z={10} startAt={2} duration={3} />
     <Sentinel y={-1} z={-10} startAt={4} duration={3.5} />

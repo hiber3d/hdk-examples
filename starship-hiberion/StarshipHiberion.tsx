@@ -35,8 +35,9 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
           rotZ={180}
           rotX={90}
         />
+
         <Corridor length={4} y={-20} z={-8}>
-          <HNode x={0} y={0}>
+          <HNode x={0} y={20}>
             {interior && debug && (
               <Prefab id="hiberpunk_decoration_disc_t1" scale={2}>
                 <Prefab id="gpl_spawn_point_01" y={2} rotY={0} />
@@ -46,7 +47,11 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
           <Hub y={22} z={-16} />
           <Corridor length={8} z={-24}>
             <HNode y={20}>
-              {/* <Sentinels /> */}
+              {interior && (
+                <HNode z={80}>
+                  <Sentinels />
+                </HNode>
+              )}
               <Prefab id="torus_thick_01" rotX={90} scale={40} z={-20} y={2} />
               <Prefab id="torus_thin_01" rotX={90} scale={52} z={-20} y={2} />
               <HNode z={-140}>
