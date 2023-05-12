@@ -13,7 +13,7 @@ export const VideoPanels: HDKComponent = (props) => {
         ratio={833 / 1480}
         scale={8}
         emissiveStrength={1.5}
-        src="./static/gurl.mp4"
+        src="https://lbsa71.github.io/starship-hiberion/gurl.mp4"
       ></VideoPanel>
       <VideoPanel
         x={44}
@@ -23,7 +23,7 @@ export const VideoPanels: HDKComponent = (props) => {
         ratio={833 / 1480}
         scale={8}
         emissiveStrength={1.5}
-        src="./static/boi.mp4"
+        src="https://lbsa71.github.io/starship-hiberion/boi.mp4"
       ></VideoPanel>
       <VideoPanel
         x={44}
@@ -33,7 +33,7 @@ export const VideoPanels: HDKComponent = (props) => {
         ratio={833 / 1480}
         scale={8}
         emissiveStrength={1.5}
-        src="./static/fayle.mp4"
+        src="https://lbsa71.github.io/starship-hiberion/fayle.mp4"
       ></VideoPanel>
       <VideoPanel
         x={-44}
@@ -42,7 +42,7 @@ export const VideoPanels: HDKComponent = (props) => {
         ratio={498 / 211}
         scale={8}
         emissiveStrength={1.5}
-        src="./static/messug.mp4"
+        src="https://lbsa71.github.io/starship-hiberion/messug.mp4"
       ></VideoPanel>
     </HNode>
   );
