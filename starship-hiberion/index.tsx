@@ -4,7 +4,8 @@ import { StarshipHiberion } from "./StarshipHiberion";
 import { Wagyu } from "./Wagyu";
 import { Giants } from "./Giants";
 import { Prefab } from "@hiber3d/hdk-react";
-import { SegmentedStack } from "@hiber3d/hdk-react-components";
+import { Hovering, SegmentedStack } from "@hiber3d/hdk-react-components";
+import React from "react";
 
 const World = () => {
   return (
@@ -18,23 +19,32 @@ const World = () => {
       </SegmentedStack> */}
       <Wagyu>
         <StarshipHiberion />
-        <StarshipHiberion
-          interior={false}
-          x={600}
-          z={-600}
-          y={40}
-          scale={0.3}
-          rotY={20}
-          rotZ={20}
-        />
-        <StarshipHiberion
-          interior={false}
-          x={100}
-          z={100}
-          y={100}
-          scale={0.1}
-          rotZ={-20}
-        />
+        <HNode x={500} z={-600} y={40}>
+          <Hovering
+            driftOff={true}
+            driftOffDuration={3000}
+            magnitude={0.001}
+            rotX={90}
+          >
+            <StarshipHiberion
+              interior={false}
+              scale={0.2}
+              rotY={20}
+              rotX={-90}
+              rotZ={-70}
+            />
+          </Hovering>
+        </HNode>
+        <Hovering driftOff={true} driftOffDuration={3000} magnitude={0.1}>
+          <StarshipHiberion
+            interior={false}
+            x={100}
+            z={100}
+            y={100}
+            scale={0.1}
+            rotZ={-20}
+          />
+        </Hovering>
       </Wagyu>
     </HNode>
   );

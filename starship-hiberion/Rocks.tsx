@@ -14,7 +14,7 @@ export const Rocks: HDKComponent = (input) => (
       outerBoundRadius={30}
       gladeRadius={10}
       renderItem={(item) => {
-        return <Prefab {...item} id="rock_pile_01_t1" s={2} />;
+        return <Prefab {...item} id="rock_pile_01_t1" scale={2} />;
       }}
     />
   </HNode>

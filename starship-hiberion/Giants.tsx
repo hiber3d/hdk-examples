@@ -6,14 +6,7 @@ import {
   useRandom,
 } from "@hiber3d/hdk-react";
 import { SegmentedStack, Avatar, Grid } from "@hiber3d/hdk-react-components";
-import {
-  Mesh,
-  Material,
-  animations,
-  MaterialId,
-  MeshId,
-  meshes,
-} from "@hiber3d/hdk-core";
+import { animations, MaterialId, MeshId } from "@hiber3d/hdk-core";
 
 export const Giants: HDKComponent = (props) => {
   const materials: MaterialId[] = [
@@ -47,14 +40,14 @@ export const Giants: HDKComponent = (props) => {
           itemSpacing={15}
           children={(data) => {
             const animation = poses[index % poses.length];
-            const meshID: Mesh = avatars[index % avatars.length];
+            const meshID: MeshId = avatars[index % avatars.length];
             const materialID: MaterialId = materials[index % materials.length];
             index++;
             return (
               <HNode rotX={15}>
                 <HNode
                   rotX={45}
-                  s={8}
+                  scale={8}
                   engineProps={{
                     rendering: {
                       meshID,
@@ -73,7 +66,9 @@ export const Giants: HDKComponent = (props) => {
                   rotX={35}
                   z={-2}
                   y={-1}
-                  s={[3, 10, 3]}
+                  scaleX={3}
+                  scaleY={10}
+                  scaleZ={3}
                 ></Prefab>
               </HNode>
             );
