@@ -1,4 +1,4 @@
-import { PrefabId, Scale3 } from "@hiber3d/hdk-core";
+import { PrefabId, Scale3, Vec3 } from "@hiber3d/hdk-core";
 import {
   HDKComponent,
   HNode,
@@ -21,13 +21,17 @@ import { Mist } from "./Mist";
 const fishSpeed = 5;
 const fishDimensions: Scale3 = [8, 0, 40];
 
-const pondGarbage = [
-  { id: "bull_skull_01", s: 2, r: [0, 0, 0] },
-  { id: "water_lily_flower_01", s: 1, r: [0, 0, 0] },
-  { id: "water_lily_pad_01", s: 1, r: [0, 0, 0] },
-  { id: "en_p_jaguar_head_01_t1", s: 0.5, r: [0, 0, 0] },
-  { id: "en_p_infested_arm_01", s: 2, r: [0, 0, 90] },
-  { id: "en_p_infested_hand_01", s: 2, r: [0, 0, 90] },
+const pondGarbage: {
+  id: PrefabId;
+  scale: number;
+  rot: Vec3;
+}[] = [
+  { id: "bull_skull_01", scale: 2, rot: [0, 0, 0] },
+  { id: "water_lily_flower_01", scale: 1, rot: [0, 0, 0] },
+  { id: "water_lily_pad_01", scale: 1, rot: [0, 0, 0] },
+  { id: "en_p_jaguar_head_01_t1", scale: 0.5, rot: [0, 0, 0] },
+  { id: "en_p_infested_arm_01", scale: 2, rot: [0, 0, 90] },
+  { id: "en_p_infested_hand_01", scale: 2, rot: [0, 0, 90] },
 ];
 
 // tree_house_balcony // fantasy_tree_01 // fantasy_tree_01 // en_p_tomato_plant_01
@@ -39,10 +43,10 @@ export const Djungle: HDKComponent = (props) => {
     <>
       <Invisible>
         <Damaging amount={10} knockbackStrength={100}>
-          <Prefab id="plane_01" s={[1, 2, 1.1]} p={[0, -35, 55]} />
+          <Prefab id="plane_01" scaleY={2} scaleZ={1.1} x={0} y={-35} z={55} />
         </Damaging>
       </Invisible>
-      <HNode p={[0, -35.5, 40]}>
+      <HNode x={0} y={-35.5} z={40}>
         <Distribute
           maxItems={100}
           outerBoundRadius={35}
@@ -59,14 +63,16 @@ export const Djungle: HDKComponent = (props) => {
                   x={item.x}
                   z={item.z}
                   id="glowing_mushroom"
-                  s={[2, 1, 2]}
+                  scaleX={2}
+                  scaleY={1}
+                  scaleZ={2}
                 />
               )
             );
           }}
         ></Distribute>
       </HNode>
-      <HNode p={[0, -29.5, 40]}>
+      <HNode x={0} y={-29.5} z={40}>
         <Distribute
           maxItems={100}
           outerBoundRadius={20}
@@ -77,28 +83,37 @@ export const Djungle: HDKComponent = (props) => {
           spaceMax={30}
           gladeRadius={1}
           renderItem={(item) => {
-            const g = random.fromArray(pondGarbage);
+            const garbage = random.fromArray(pondGarbage);
 
             return (
               <Hovering magnitude={0.05}>
                 <Prefab
                   x={item.x}
                   z={item.z}
-                  r={[g.r[0], g.r[1] + random.int(0, 360), g.r[2]]}
-                  id={g.id as PrefabId}
-                  s={g.s}
+                  rotX={garbage.rot[0]}
+                  rotY={garbage.rot[1] + random.int(0, 360)}
+                  rotZ={garbage.rot[2]}
+                  id={garbage.id as PrefabId}
+                  scale={garbage.scale}
                 />
               </Hovering>
             );
           }}
         ></Distribute>
       </HNode>
-      <Prefab id="water_plane_01" s={[10, 10, 18]} p={[0, -50, 65]} />
+      <Prefab
+        id="water_plane_01"
+        scaleX={10}
+        scaleY={10}
+        scaleZ={18}
+        x={0}
+        y={-50}
+        z={65}
+      />
       {/* <Mist p={[0, -32, 60]} /> */}
 
       <Random seed={14}>
-        {/* <HNode p={[30, -28, -40]}> */}
-        <HNode p={[0, -30, 40]}>
+        <HNode x={0} y={-30} z={40}>
           <Damaging amount={10} knockbackStrength={50}>
             <Material id="t_sci_fi_tile_02">
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
@@ -114,8 +129,8 @@ export const Djungle: HDKComponent = (props) => {
         </HNode>
       </Random>
       <Random seed={13}>
-        <HNode p={[0, -26, 90]}>
-          <Fish s={8} dimensions={[3, 0, 3]} speed={fishSpeed} />
+        <HNode x={0} y={-26} z={90}>
+          <Fish scale={8} dimensions={[3, 0, 3]} speed={fishSpeed} />
         </HNode>
       </Random>
     </>

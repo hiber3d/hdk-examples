@@ -15,7 +15,8 @@ export const MeatGrinder: HDKComponent = (props) => {
         <Spinning duration={60}>
           <Prefab
             id="gpl_rotating_twist_01"
-            s={[2.6, 1, 2.6]}
+            scaleX={2.6}
+            scaleZ={2.6}
             material={materials.palette_02_silver.id}
           />
         </Spinning>
@@ -40,7 +41,9 @@ export const MeatGrinder: HDKComponent = (props) => {
                               : "rounded_cylinder_02"
                           }
                           y={3 * (index % 3)}
-                          s={[0.8, 0.6, 0.8]}
+                          scaleX={0.8}
+                          scaleY={0.6}
+                          scaleZ={0.8}
                         />
                       );
                     }}
@@ -60,7 +63,9 @@ export const MeatGrinder: HDKComponent = (props) => {
                               : "rounded_cylinder_02"
                           }
                           y={3 * (index % 3) + random.range(0, 2)}
-                          s={[2, 1, 2]}
+                          scaleX={2}
+                          scaleY={1}
+                          scaleZ={2}
                         />
                       );
                     }}
@@ -72,18 +77,7 @@ export const MeatGrinder: HDKComponent = (props) => {
                     items={3}
                     renderItem={({ index, progress }) => {
                       return (
-                        <HNode
-                        //   spotlight={{
-                        //     color: "red",
-                        //     radius: 10,
-                        //     strength: 100,
-                        //     dir: [
-                        //       random90Deg(random),
-                        //       random90Deg(random),
-                        //       random90Deg(random),
-                        //     ],
-                        //   }}
-                        >
+                        <HNode>
                           <Prefab
                             material="t_sci_fi_tile_04"
                             id={
@@ -92,7 +86,9 @@ export const MeatGrinder: HDKComponent = (props) => {
                                 : "rounded_cylinder_02"
                             }
                             y={3 * (index % 3) + random.range(0, 2)}
-                            s={[2, 1, 2]}
+                            scaleX={2}
+                            scaleY={1}
+                            scaleZ={2}
                           />
                         </HNode>
                       );
@@ -106,7 +102,8 @@ export const MeatGrinder: HDKComponent = (props) => {
               <Spinning duration={60}>
                 <Prefab
                   id="gpl_rotating_twist_01"
-                  s={[2.6, 1, 2.6]}
+                  scaleX={2.6}
+                  scaleZ={2.6}
                   material={materials.palette_02_silver.id}
                 />
               </Spinning>

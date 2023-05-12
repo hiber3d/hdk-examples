@@ -63,7 +63,7 @@ export const Fish: HDKComponent<FishOptions> = (input) => {
         <PointLight radius={5} color="white" strength={20} offset={[0, 4, 0]}>
           <Prefab
             id="sphere_01"
-            s={0.5}
+            scale={0.5}
             engineProps={{
               audio: {
                 attenuationModel: "EXPONENTIAL_DISTANCE",
