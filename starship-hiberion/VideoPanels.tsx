@@ -7,32 +7,38 @@ export const VideoPanels: HDKComponent = (props) => {
   return (
     <HNode {...props}>
       <VideoPanel
-        p={[44, 0, 0]}
-        r={[-40, 90, 0]}
+        x={44}
+        rotX={-40}
+        rotY={90}
         ratio={833 / 1480}
         scale={8}
         emissiveStrength={1.5}
         src="./static/gurl.mp4"
       ></VideoPanel>
       <VideoPanel
-        p={[44, 0, 10]}
-        r={[-40, 90, 0]}
+        x={44}
+        z={10}
+        rotX={-40}
+        rotY={90}
         ratio={833 / 1480}
         scale={8}
         emissiveStrength={1.5}
         src="./static/boi.mp4"
       ></VideoPanel>
       <VideoPanel
-        p={[44, 0, 20]}
-        r={[-40, 90, 0]}
+        x={44}
+        z={20}
+        rotX={-40}
+        rotY={90}
         ratio={833 / 1480}
         scale={8}
         emissiveStrength={1.5}
         src="./static/fayle.mp4"
       ></VideoPanel>
       <VideoPanel
-        p={[-44, 0, 0]}
-        r={[40, 90, 0]}
+        x={-44}
+        rotX={40}
+        rotY={90}
         ratio={498 / 211}
         scale={8}
         emissiveStrength={1.5}

@@ -12,6 +12,7 @@ const speed = 20;
 export const Wagyu: HDKComponent = (props) => {
   return (
     <HNode>
+      {/*       
       <HNode {...props} keyframeAnimated={keyframeAnimated}>
         <HNode
           keyframe={{ easing: "EASE_IN_OUT_CUBIC", timestamp: 0 }}
@@ -34,9 +35,9 @@ export const Wagyu: HDKComponent = (props) => {
             timestamp: pause + 2 * speed + 2,
           }}
           r={[-90, 0, 0]}
-        />
-        <HNode p={[0, 0, 140]}>{props.children}</HNode>
-      </HNode>
+        /> */}
+      <HNode z={140}>{props.children}</HNode>
+      {/* </HNode> */}
     </HNode>
   );
 };

@@ -35,7 +35,7 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
           rotZ={180}
           rotX={90}
         />
-        <Corridor length={4} p={[0, -20, -8]}>
+        <Corridor length={4} y={-20} z={-8}>
           <HNode x={0} y={0}>
             {interior && debug && (
               <Prefab id="hiberpunk_decoration_disc_t1" scale={2}>
@@ -43,13 +43,13 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
               </Prefab>
             )}
           </HNode>
-          <Hub p={[0, 22, -16]} />
-          <Corridor length={8} p={[0, 0, -24]}>
-            <HNode p={[0, 20, 0]}>
+          <Hub y={22} z={-16} />
+          <Corridor length={8} z={-24}>
+            <HNode y={20}>
               {/* <Sentinels /> */}
               <Prefab id="torus_thick_01" rotX={90} scale={40} z={-20} y={2} />
               <Prefab id="torus_thin_01" rotX={90} scale={52} z={-20} y={2} />
-              <HNode p={[0, 0, -140]}>
+              <HNode z={-140}>
                 {/* <Platform  /> */}
                 <InCircle
                   rotX={90}
@@ -58,7 +58,9 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                   items={10}
                   renderItem={(item) => (
                     <Prefab
-                      scale={[7.5, 32, 4]}
+                      scaleX={7.5}
+                      scaleY={32}
+                      scaleZ={4}
                       rotY={90}
                       id="hiberpunk_blocks_m1_01"
                     />
@@ -88,8 +90,8 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                 <HNode z={-10}>
                   <Prefab id="torus_thick_01" rotX={90} scale={40} y={2} />
                   <Prefab id="torus_thin_01" rotX={90} scale={52} y={2} />
-                  <Corridor length={3} p={[0, -20, 0]}>
-                    <HNode p={[0, 20, 0]}>
+                  <Corridor length={3} y={-20}>
+                    <HNode y={20}>
                       {/* <Prefab
                         id="rounded_cylinder_01"
                         rotX={90}
@@ -110,7 +112,7 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                         z={-20}
                         y={2}
                       />
-                      <HNode p={[0, 0, -140]}>
+                      <HNode z={-140}>
                         <InCircle
                           rotX={90}
                           faceCenter={true}
@@ -118,15 +120,17 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                           items={10}
                           renderItem={(item) => (
                             <Prefab
-                              scale={[7.5, 32, 4]}
+                              scaleX={7.5}
+                              scaleY={32}
+                              scaleZ={4}
                               rotY={90}
                               id="hiberpunk_blocks_m1_01"
                             />
                           )}
                         ></InCircle>
                         {interior && <Djungle />}
-                        {interior && <RoofWalkway p={[0, 10, 73]} />}
-                        {interior && <VideoPanels p={[0, 21, 70]} />}
+                        {interior && <RoofWalkway y={10} z={73} />}
+                        {interior && <VideoPanels y={21} z={70} />}
                         {interior && debug && (
                           <HNode x={0} y={-15} z={20} rotY={180}>
                             <Prefab id="hiberpunk_decoration_disc_t1" scale={2}>
@@ -149,12 +153,19 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                             z={-20}
                             y={2}
                           />
-                          <HNode p={[0, 0, 3]}>
-                            <HNode r={[-90, 0, 0]}>
-                              <Prefab id="candles_01" scale={[100, 70, 80]} />
+                          <HNode z={3}>
+                            <HNode rotX={-90}>
                               <Prefab
                                 id="candles_01"
-                                scale={[75, 50, 50]}
+                                scaleX={100}
+                                scaleY={70}
+                                scaleZ={80}
+                              />
+                              <Prefab
+                                id="candles_01"
+                                scaleX={75}
+                                scaleY={50}
+                                scaleZ={50}
                                 rotY={90}
                               />
                             </HNode>

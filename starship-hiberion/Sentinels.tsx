@@ -1,9 +1,6 @@
 import React from "react";
+import { HNode, Prefab, Animation } from "@hiber3d/hdk-react";
 import { Hovering, Spinning } from "@hiber3d/hdk-react-components";
-
-import { HNode, Prefab } from "@hiber3d/hdk-react";
-
-import { Sentinels } from "./Sentinels";
 
 const Sentinel = (props: {
   y: number;
@@ -12,32 +9,32 @@ const Sentinel = (props: {
   duration: number;
 }) => {
   return (
-    <HNode
-      y={props.y}
-      z={props.z}
-      animation={{
-        z: [-60, -30, 0, 30, 60, 100],
-        duration: props.duration,
-        loop: "REVERSE",
-        startAt: props.startAt,
-        easing: "LINEAR",
-      }}
-    >
-      <Hovering magnitude={5} rotZ={90}>
-        <Spinning axis="z">
-          <Spinning axis="y">
-            <Prefab id="glowing_orb_01" scale={[1, 1, 1]} />
+    <HNode y={props.y} z={props.z}>
+      <Animation
+        animation={{
+          z: [-60, -30, 0, 30, 60, 100],
+          duration: props.duration,
+          loop: "REVERSE",
+          startAt: props.startAt,
+          easing: "LINEAR",
+        }}
+      >
+        <Hovering magnitude={5} rotZ={90}>
+          <Spinning axis="z">
+            <Spinning axis="y">
+              <Prefab id="glowing_orb_01" />
+            </Spinning>
+            <Spinning axis="y">
+              <Prefab id="h_sawblade_01" y={0.5} />
+            </Spinning>
           </Spinning>
-          <Spinning axis="y">
-            <Prefab id="h_sawblade_01" scale={[1, 1, 1]} y={0.5} />
-          </Spinning>
-        </Spinning>
-      </Hovering>
+        </Hovering>
+      </Animation>
     </HNode>
   );
 };
 
-export const Sentinels = (props) => (
+export const Sentinels = () => (
   <HNode>
     <Sentinel y={0} z={0} startAt={0} duration={2} />
     <Sentinel y={1} z={10} startAt={2} duration={3} />

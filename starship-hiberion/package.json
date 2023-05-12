@@ -14,11 +14,6 @@
     "@hiber3d/hdk-core": "^0.4.5",
     "@hiber3d/hdk-react": "^0.3.7",
     "@hiber3d/hdk-react-components": "^0.3.7",
-    "@hiber3d/hdk-utils": "^0.2.5",
-    "react": "^18.2.0",
-    "react-reconciler": "^0.29.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.6"
+    "@hiber3d/hdk-utils": "^0.2.5"
   }
 }
