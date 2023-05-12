@@ -68,6 +68,8 @@ jobs:
               - 'hiber-dig/**'
             balloons:
               - '99-balloons/**'
+            hibertropolis:
+              - 'hibertropolis/**'
 
       - name: Upload 'all-assets'
         if: steps.changes.outputs.all-assets == 'true'
@@ -170,3 +172,9 @@ jobs:
         uses: HiberWorld/code-kit-upload@latest
         with:
           world: "99-balloons"
+
+      - name: Upload 'hibertropolis'
+        if: steps.changes.outputs.hibertropolis == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "hibertropolis"
