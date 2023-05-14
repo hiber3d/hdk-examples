@@ -4,6 +4,7 @@ import {
   PointLight,
   HDKComponent,
   useRandom,
+  SpotLight,
 } from "@hiber3d/hdk-react";
 import { SegmentedStack, Avatar, Grid } from "@hiber3d/hdk-react-components";
 import { animations, MaterialId, MeshId } from "@hiber3d/hdk-core";
@@ -60,6 +61,7 @@ export const Giants: HDKComponent = (props) => {
                     },
                   }}
                 ></HNode>
+                <SpotLight dir={[0, 160, 0]} offset={[0, -1, 1.5]}></SpotLight>
                 <Prefab
                   material="t_ice_01"
                   id="rounded_cube_02"

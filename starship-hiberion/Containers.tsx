@@ -128,7 +128,7 @@ export const Containers: HDKComponent = (props) => (
         scale={0.6}
       />
     </Prefab>
-    <HNode y={40} z={-30}>
+    {/* <HNode y={40} z={-30}>
       <Prefab
         id="en_p_garden_gate_01"
         scaleX={35}
@@ -164,6 +164,6 @@ export const Containers: HDKComponent = (props) => (
       <HNode y={40} z={-30}>
         <Prefab id="en_p_shipping_container_01" scaleY={0.8}></Prefab>
       </HNode>
-    </Animation>
+    </Animation> */}
   </HNode>
 );

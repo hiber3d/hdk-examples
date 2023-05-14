@@ -55,7 +55,7 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
               <Prefab id="torus_thick_01" rotX={90} scale={40} z={-20} y={2} />
               <Prefab id="torus_thin_01" rotX={90} scale={52} z={-20} y={2} />
               <HNode z={-140}>
-                {/* <Platform  /> */}
+                {interior && <Platform debug />}
                 <InCircle
                   rotX={90}
                   faceCenter={true}
@@ -80,11 +80,7 @@ export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
                 /> */}
 
                 {/* <MeatGrinder z={11.5} x={0} y={0} rotX={90} /> */}
-                {/* <HNode x={0} y={0} z={40}>
-                  <Prefab id="hiberpunk_decoration_disc_t1" scale={2}>
-                    <Prefab id="gpl_spawn_point_01" y={2} rotY={0} />
-                  </Prefab>
-                </HNode> */}
+
                 {interior && debug && (
                   <HNode x={200} y={0} z={0} rotY={90}>
                     <Prefab id="hiberpunk_decoration_disc_t1" scale={2}>
