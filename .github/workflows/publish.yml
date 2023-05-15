@@ -70,6 +70,8 @@ jobs:
               - '99-balloons/**'
             hibertropolis:
               - 'hibertropolis/**'
+            obby-islands:
+              - 'obby-islands/**'
 
       - name: Upload 'all-assets'
         if: steps.changes.outputs.all-assets == 'true'
@@ -178,3 +180,9 @@ jobs:
         uses: HiberWorld/code-kit-upload@latest
         with:
           world: "hibertropolis"
+
+      - name: Upload 'obby-islands'
+        if: steps.changes.outputs.obby-islands == 'true'
+        uses: HiberWorld/code-kit-upload@latest
+        with:
+          world: "obby-islands"
