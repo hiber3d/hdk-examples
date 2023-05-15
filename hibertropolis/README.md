@@ -1,6 +1,6 @@
 # hibertropolis
 
-This is a Hiber3D HDK project created using [create-hdk](https://github.com/hiberworld/codekit/packages/create-hdk)
+This is a Hiber3D HDK project created using [create-hdk](https://www.npmjs.com/package/create-hdk)
 
 Please see [HDK Docs](https://developer.hiber3d.com/docs/) for full documentation.
 
