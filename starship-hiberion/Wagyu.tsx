@@ -4,8 +4,9 @@ import { LoopBehaviour } from "@hiber3d/hdk-core";
 
 const keyframeAnimated = { loopBehaviour: "REVERSE" as LoopBehaviour };
 
-const pause = 1;
-const speed = 1;
+const duration = 50;
+const speed = 20;
+const pause = duration - speed;
 
 export const Wagyu: HDKComponent = ({ children, ...props }) => {
   return (
@@ -14,12 +15,12 @@ export const Wagyu: HDKComponent = ({ children, ...props }) => {
         animation={{
           rotX: [0, 0, -90, -90],
           loop: "REVERSE",
-          easing: "EASE_IN_OUT_CUBIC",
-          steps: [pause, speed, pause, speed],
-          duration: 20,
+          easing: "EASE_IN_OUT_QUAD",
+          steps: [0, speed / duration, pause / duration, 1],
+          duration,
         }}
       >
-        {children}
+        <HNode z={240}>{children}</HNode>
       </Animation>
     </HNode>
   );

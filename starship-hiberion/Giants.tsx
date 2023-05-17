@@ -10,12 +10,7 @@ import { SegmentedStack, Avatar, Grid } from "@hiber3d/hdk-react-components";
 import { animations, MaterialId, MeshId } from "@hiber3d/hdk-core";
 
 export const Giants: HDKComponent = (props) => {
-  const materials: MaterialId[] = [
-    "t_ice_01",
-    "t_ice_02",
-    "t_ice_03",
-    "t_icy_water_01",
-  ];
+  const materials: MaterialId[] = ["t_neon_grid_01"];
   const avatars: MeshId[] = [
     "ch_pl_gaia_01",
     "ch_pl_hibert_astronaut_01",
@@ -28,7 +23,8 @@ export const Giants: HDKComponent = (props) => {
   const poses = [
     animations.an_default_buildidle,
     animations.an_default_emote_yes,
-    animations.an_default_emote_applaud,
+    animations.an_default_emote_no,
+    animations.an_default_emote_chickendance,
     animations.an_default_emote_facepalm,
   ];
   let index = 0;
@@ -36,7 +32,7 @@ export const Giants: HDKComponent = (props) => {
     <HNode {...props}>
       <HNode rotX={-90}>
         <Grid
-          rows={3}
+          rows={2}
           columns={4}
           itemSpacing={15}
           children={(data) => {
@@ -57,7 +53,7 @@ export const Giants: HDKComponent = (props) => {
                     skinnedAnimation: {
                       animationID: animation.id,
                       skeletonGroupID: animation.skeletonGroupID,
-                      animationSpeed: random.range(0.001, 0.01),
+                      animationSpeed: random.range(0.02, 0.04),
                     },
                   }}
                 ></HNode>
@@ -65,12 +61,19 @@ export const Giants: HDKComponent = (props) => {
                   material="t_water_01"
                   id="rounded_cube_02"
                   rotX={35}
-                  z={-2.0}
+                  z={0}
                   y={-4}
-                  scaleX={3}
+                  scaleX={5}
                   scaleY={10}
-                  scaleZ={4}
+                  scaleZ={5}
                 ></Prefab>
+                <Prefab
+                  z={5}
+                  id="hiberpunk_blocks_f1_01"
+                  x={7}
+                  scaleZ={7.6}
+                  scaleY={4}
+                />
               </HNode>
             );
           }}

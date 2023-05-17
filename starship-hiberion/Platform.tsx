@@ -28,8 +28,13 @@ export const Platform: HDKComponent<{ debug: boolean }> = ({
         </Prefab>
       </HNode>
     )}
-    <HNode x={35} y={35} z={-35}>
-      <Giants rotY={-90} rotZ={35} />
+    <HNode y={11} z={-43}>
+      <HNode x={35}>
+        <Giants rotY={-90} />
+      </HNode>
+      <HNode x={-35} rotY={180}>
+        <Giants rotY={-90} />
+      </HNode>
     </HNode>
     <RampedGrid x={8} y={20} z={64} />
   </HNode>
