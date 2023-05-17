@@ -1,5 +1,1 @@
-yarn add @hiber3d/hdk-cli@latest
-yarn add @hiber3d/hdk-core@latest
-yarn add @hiber3d/hdk-utils@latest
-yarn add @hiber3d/hdk-react@latest
-yarn add @hiber3d/hdk-react-components@latest
+yarn add @hiber3d/hdk-cli@latest @hiber3d/hdk-core@latest @hiber3d/hdk-utils@latest @hiber3d/hdk-react@latest @hiber3d/hdk-react-components@latest

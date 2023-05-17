@@ -1,43 +1,26 @@
-import React from "react";
-
-import { HDKComponent, HNode } from "@hiber3d/hdk-react";
+import { HDKComponent, HNode, Animation } from "@hiber3d/hdk-react";
 
 import { LoopBehaviour } from "@hiber3d/hdk-core";
 
 const keyframeAnimated = { loopBehaviour: "REVERSE" as LoopBehaviour };
 
-const pause = 600;
-const speed = 20;
+const pause = 1;
+const speed = 1;
 
-export const Wagyu: HDKComponent = (props) => {
+export const Wagyu: HDKComponent = ({ children, ...props }) => {
   return (
-    <HNode>
-      {/*       
-      <HNode {...props} keyframeAnimated={keyframeAnimated}>
-        <HNode
-          keyframe={{ easing: "EASE_IN_OUT_CUBIC", timestamp: 0 }}
-          r={[0, 0, 0]}
-        />
-        <HNode
-          keyframe={{ easing: "EASE_IN_OUT_CUBIC", timestamp: pause }}
-          r={[0, 0, 0]}
-        />
-        <HNode
-          keyframe={{
-            easing: "EASE_IN_OUT_CUBIC",
-            timestamp: pause + 2 * speed,
-          }}
-          r={[-90, 0, 0]}
-        />
-        <HNode
-          keyframe={{
-            easing: "EASE_IN_OUT_CUBIC",
-            timestamp: pause + 2 * speed + 2,
-          }}
-          r={[-90, 0, 0]}
-        /> */}
-      <HNode z={140}>{props.children}</HNode>
-      {/* </HNode> */}
+    <HNode {...props}>
+      <Animation
+        animation={{
+          rotX: [0, 0, -90, -90],
+          loop: "REVERSE",
+          easing: "EASE_IN_OUT_CUBIC",
+          steps: [pause, speed, pause, speed],
+          duration: 20,
+        }}
+      >
+        {children}
+      </Animation>
     </HNode>
   );
 };

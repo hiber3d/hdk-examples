@@ -1,6 +1,9 @@
 {
   "private": true,
   "workspaces": [
-    "dragons-nest"
+    "dragons-nest",
+    "hibertropolis",
+    "obby-islands",
+    "staship-hiberion"
   ]
 }

@@ -1,11 +1,7 @@
 import { HNode, render } from "@hiber3d/hdk-react";
-
+import { Hovering } from "@hiber3d/hdk-react-components";
 import { StarshipHiberion } from "./StarshipHiberion";
 import { Wagyu } from "./Wagyu";
-import { Giants } from "./Giants";
-import { Prefab } from "@hiber3d/hdk-react";
-import { Hovering, SegmentedStack } from "@hiber3d/hdk-react-components";
-import React from "react";
 
 const World = () => {
   return (
@@ -19,38 +15,34 @@ const World = () => {
       </SegmentedStack> */}
       <Wagyu>
         <StarshipHiberion />
-        <HNode x={500} z={-600} y={40}>
-          <Hovering
-            driftOff={true}
-            driftOffDuration={3000}
-            magnitude={0.001}
-            rotX={90}
-          >
+        <Hovering
+          driftOff={true}
+          driftOffDuration={4000}
+          magnitude={0.001}
+          rotX={90}
+        >
+          <HNode x={450} z={50} y={-150} rotX={-90}>
             <StarshipHiberion
               interior={false}
-              scale={0.2}
-              rotY={20}
-              rotX={-90}
+              scale={0.1}
+              rotY={10}
               rotZ={-70}
             />
-          </Hovering>
-        </HNode>
-        <Hovering driftOff={true} driftOffDuration={3000} magnitude={0.1}>
+          </HNode>
           <StarshipHiberion
             interior={false}
-            x={100}
-            z={100}
-            y={100}
+            x={-100}
+            z={-160}
+            y={20}
             scale={0.1}
             rotZ={-20}
-          />
+            rotX={-90}
+          ></StarshipHiberion>
         </Hovering>
       </Wagyu>
     </HNode>
   );
 };
-
-const baseUrl = "https://dao-pr.dev.hiberdev.net/engine/dev/latest/production";
 
 render(<World />, {
   environment: "starry_night_01",
@@ -59,7 +51,4 @@ render(<World />, {
   //dark_city_night_01
   //underwater_01
   //hiberpunk_bloom_01
-
-  engineUrl: `${baseUrl}/hiber.js`,
-  wasmUrl: `${baseUrl}/Hiberworld.wasm.gz`,
 });

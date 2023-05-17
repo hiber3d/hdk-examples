@@ -13,9 +13,7 @@ export const RocksUnderTree = () => {
           y={-30 - random.int(0, 200)}
           z={-60 + random.int(0, 100)}
           scale={random.int(3, 13)}
-          rotX={random.range(0, 360)}
-          rotY={random.range(0, 360)}
-          rotZ={random.range(0, 360)}
+          r={[random.range(0, 360), random.range(0, 360), random.range(0, 360)]}
         />
       ))}
     </>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Prefab, HNode, Animation } from '@hiber3d/hdk-react';
+import { Prefab, HNode } from '@hiber3d/hdk-react';
 import { useRandom } from '@hiber3d/hdk-react';
 
 export const Tree = () => {
@@ -7,7 +7,7 @@ export const Tree = () => {
   return (
     <Prefab id="jungle_tree_large" x={125} y={-8} scaleX={8} scaleY={4} scaleZ={8}>
       {Array.from({ length: 30 }).map((_, index) => (
-        <Animation
+        <HNode
           animation={{
             rotY: [0, 180, 360],
             loop: 'RESTART',
@@ -23,7 +23,7 @@ export const Tree = () => {
             scale={random.range(0.1, 0.4)}
             rotY={(360 / 30) * index}
           />
-        </Animation>
+        </HNode>
       ))}
       {Array.from({ length: 70 }).map((_, index) => (
         <HNode rotY={(220 / 50) * index}>

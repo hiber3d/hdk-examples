@@ -61,16 +61,15 @@ export const Giants: HDKComponent = (props) => {
                     },
                   }}
                 ></HNode>
-                <SpotLight dir={[0, 160, 0]} offset={[0, -1, 1.5]}></SpotLight>
                 <Prefab
-                  material="t_ice_01"
+                  material="t_water_01"
                   id="rounded_cube_02"
                   rotX={35}
-                  z={-2}
-                  y={-1}
+                  z={-2.0}
+                  y={-4}
                   scaleX={3}
                   scaleY={10}
-                  scaleZ={3}
+                  scaleZ={4}
                 ></Prefab>
               </HNode>
             );
