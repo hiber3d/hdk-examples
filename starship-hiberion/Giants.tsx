@@ -10,7 +10,12 @@ import { SegmentedStack, Avatar, Grid } from "@hiber3d/hdk-react-components";
 import { animations, MaterialId, MeshId } from "@hiber3d/hdk-core";
 
 export const Giants: HDKComponent = (props) => {
-  const materials: MaterialId[] = ["t_neon_grid_01"];
+  const materials: MaterialId[] = [
+    "t_ice_01",
+    "t_ice_02",
+    "t_ice_03",
+    "t_icy_water_01",
+  ];
   const avatars: MeshId[] = [
     "ch_pl_gaia_01",
     "ch_pl_hibert_astronaut_01",
@@ -53,12 +58,12 @@ export const Giants: HDKComponent = (props) => {
                     skinnedAnimation: {
                       animationID: animation.id,
                       skeletonGroupID: animation.skeletonGroupID,
-                      animationSpeed: random.range(0.02, 0.04),
+                      animationSpeed: random.range(0.01, 0.02),
                     },
                   }}
                 ></HNode>
                 <Prefab
-                  material="t_water_01"
+                  material="glass"
                   id="rounded_cube_02"
                   rotX={35}
                   z={0}

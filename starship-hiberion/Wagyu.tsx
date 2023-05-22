@@ -4,7 +4,7 @@ import { LoopBehaviour } from "@hiber3d/hdk-core";
 
 const keyframeAnimated = { loopBehaviour: "REVERSE" as LoopBehaviour };
 
-const duration = 50;
+const duration = 180;
 const speed = 20;
 const pause = duration - speed;
 

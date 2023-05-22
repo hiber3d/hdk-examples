@@ -3,6 +3,8 @@ import { Hovering } from "@hiber3d/hdk-react-components";
 import { StarshipHiberion } from "./StarshipHiberion";
 import { Wagyu } from "./Wagyu";
 
+const debug = false;
+
 const World = () => {
   return (
     <HNode>
@@ -14,7 +16,7 @@ const World = () => {
         <Prefab id="cactus_01" p={[0, 2, 0]} />
       </SegmentedStack> */}
       <Wagyu>
-        <StarshipHiberion />
+        <StarshipHiberion debug={debug} />
         <Hovering
           driftOff={true}
           driftOffDuration={4000}

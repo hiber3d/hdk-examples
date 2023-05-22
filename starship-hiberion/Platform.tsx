@@ -6,9 +6,11 @@ import { HDKComponent, HNode, Prefab } from "@hiber3d/hdk-react";
 import { Containers } from "./Containers";
 import { RampedGrid } from "./RampedGrid";
 import { Giants } from "./Giants";
+import { StarshipComponent } from "./types";
 
-export const Platform: HDKComponent<{ debug: boolean }> = ({
+export const Platform: StarshipComponent = ({
   debug = false,
+  interior = true,
   ...props
 }) => (
   <HNode z={80} y={-26}>
@@ -21,7 +23,7 @@ export const Platform: HDKComponent<{ debug: boolean }> = ({
       }}
     ></Grid>
     <Containers z={0} x={-20} />
-    {debug && (
+    {debug && interior && (
       <HNode x={0} y={0} z={0} rotY={90}>
         <Prefab id="hiberpunk_decoration_disc_t1" scale={2}>
           <Prefab id="gpl_spawn_point_01" y={2} rotY={0} />

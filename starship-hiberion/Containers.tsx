@@ -1,7 +1,9 @@
 import { HNode, Prefab, HDKComponent, Animation } from "@hiber3d/hdk-react";
-import { SegmentedStack } from "@hiber3d/hdk-react-components";
+import { SegmentedStack, Stack } from "@hiber3d/hdk-react-components";
 
 // trashcontainer_01 // trashcontainer_01_t1 //
+const maxx = 40;
+const maxz = 60;
 
 export const Containers: HDKComponent = (props) => (
   <HNode {...props} scale={1.1}>
@@ -122,13 +124,24 @@ export const Containers: HDKComponent = (props) => (
       <Prefab
         id="en_p_grid_ramp_01"
         x={0}
-        y={14}
+        y={12}
         z={16}
         rotY={180}
         scale={0.6}
       />
     </Prefab>
-    {/* <HNode y={40} z={-30}>
+    <HNode x={0} y={14} z={26}>
+      <Stack
+        numberOfItems={7}
+        rotY={90}
+        rotZ={-60}
+        rotX={10}
+        dimensions={2.4}
+        direction="UP"
+        renderItem={<Prefab id="en_p_grid_fence_01" />}
+      />
+    </HNode>
+    <HNode y={40} z={-30}>
       <Prefab
         id="en_p_garden_gate_01"
         scaleX={35}
@@ -152,18 +165,20 @@ export const Containers: HDKComponent = (props) => (
         material="palette_02_steel"
       ></Prefab>
     </HNode>
-    <Animation
-      animation={{
-        rotY: [0, -90, -90, -180, -180, -270, -270, -360, 0],
-        x: [0, 0, 40, 40, 40, 40, 0, 0, 0],
-        z: [0, 0, 0, 0, 60, 60, 60, 60, 0],
-        duration: 10,
-        loop: "RESTART",
-      }}
-    >
-      <HNode y={40} z={-30}>
-        <Prefab id="en_p_shipping_container_01" scaleY={0.8}></Prefab>
-      </HNode>
-    </Animation> */}
+    <HNode y={30} z={-30}>
+      <Animation
+        animation={{
+          rotY: [0, -90, -90, -180, -180, -270, -270, -360, 0],
+          x: [0, 0, maxx, maxx, maxx, maxx, 0, 0, 0],
+          z: [0, 0, 0, 0, maxz, maxz, maxz, maxz, 0],
+          duration: 40,
+          loop: "RESTART",
+        }}
+      >
+        <HNode y={0} z={0}>
+          <Prefab id="en_p_shipping_container_01" scaleY={0.8}></Prefab>
+        </HNode>
+      </Animation>
+    </HNode>
   </HNode>
 );

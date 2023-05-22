@@ -19,13 +19,10 @@ import { VideoPanels } from "./VideoPanels";
 import { Corridor } from "./Corridor";
 
 import { VideoPanel } from "@hiber3d/hdk-react-components";
+import { StarshipComponent } from "./types";
 
-const debug = true;
-
-export const StarshipHiberion: HDKComponent<{ interior?: Boolean }> = (
-  props
-) => {
-  const { interior = true } = props;
+export const StarshipHiberion: StarshipComponent = (props) => {
+  const { interior = true, debug = false } = props;
   return (
     <HNode {...props}>
       <HNode>
