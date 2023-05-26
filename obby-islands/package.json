@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@hiber3d/hdk-cli": "^0.5.3",
-    "@hiber3d/hdk-core": "^0.5.0",
-    "@hiber3d/hdk-react": "^0.3.12",
-    "@hiber3d/hdk-react-components": "^0.3.12",
-    "@hiber3d/hdk-utils": "^0.2.10"
+    "@hiber3d/hdk-core": "^0.5.4",
+    "@hiber3d/hdk-react": "^0.3.17",
+    "@hiber3d/hdk-react-components": "^0.3.19",
+    "@hiber3d/hdk-utils": "^0.2.15"
   }
 }
