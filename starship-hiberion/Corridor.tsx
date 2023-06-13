@@ -30,8 +30,8 @@ export const Corridor: HDKComponent<{ length: number }> = (input) => {
         dimensions={16}
         direction="OUT"
         renderItem={() => <Prefab id="hiberpunk_blocks_o1_01" scale={8} />}
+        renderAfter={children}
       >
-        {children}
       </Stack>
     </HNode>
   );

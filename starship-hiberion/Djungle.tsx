@@ -48,17 +48,17 @@ export const Djungle: HDKComponent = (props) => {
       </Invisible>
       <HNode x={0} y={-35.5} z={40}>
         <Distribute
-          maxItems={100}
+      
           outerBoundRadius={35}
-          gapFreq={0.1}
-          gapMin={8}
-          gapMax={16}
-          spaceMin={10}
-          spaceMax={12}
+          gapFrequency={0.1}
+          gapSizeMin={8}
+          gapSizeMax={16}
+          itemAreaSizeMin={10}
+          itemAreaSizeMax={12}
           gladeRadius={15}
           renderItem={(item) => {
             return (
-              item.isSpace && (
+              item.isItem && (
                 <Prefab
                   x={item.x}
                   z={item.z}
@@ -74,13 +74,13 @@ export const Djungle: HDKComponent = (props) => {
       </HNode>
       <HNode x={0} y={-29.5} z={40}>
         <Distribute
-          maxItems={100}
+   
           outerBoundRadius={20}
-          gapFreq={0.2}
-          gapMax={30}
-          gapMin={3}
-          spaceMin={4}
-          spaceMax={30}
+          gapFrequency={0.2}
+          gapSizeMax={30}
+          gapSizeMin={3}
+          itemAreaSizeMin={4}
+          itemAreaSizeMax={30}
           gladeRadius={1}
           renderItem={(item) => {
             const garbage = random.fromArray(pondGarbage);

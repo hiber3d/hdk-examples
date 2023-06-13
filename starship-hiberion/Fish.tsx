@@ -25,7 +25,7 @@ export const Fish: HDKComponent<FishOptions> = (input) => {
 
   const random = useRandom();
 
-  const box = scaleToVec3(dimensions) || [10, 10, 10];
+  const box = scaleToVec3(dimensions || 10) ;
 
   const x: number[] = quadrants.map((q) => {
     const lowX = (q.x * box[0]) / 2;

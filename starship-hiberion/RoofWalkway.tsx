@@ -9,7 +9,7 @@ export const RoofWalkway: HDKComponent = (props) => (
       rows={14}
       columns={1}
       itemSpacing={8}
-      children={() => {
+      renderItem={() => {
         return <Prefab id="en_p_grid_platform_01" scaleX={2.2} scaleZ={2.2} />;
       }}
     ></Grid>

@@ -3,7 +3,7 @@ import { Hovering } from "@hiber3d/hdk-react-components";
 import { StarshipHiberion } from "./StarshipHiberion";
 import { Wagyu } from "./Wagyu";
 
-const debug = false;
+const debug = true;
 
 const World = () => {
   return (

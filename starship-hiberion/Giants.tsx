@@ -40,7 +40,7 @@ export const Giants: HDKComponent = (props) => {
           rows={2}
           columns={4}
           itemSpacing={15}
-          children={(data) => {
+          renderItem={(data) => {
             const animation = poses[index % poses.length];
             const meshID: MeshId = avatars[index % avatars.length];
             const materialID: MaterialId = materials[index % materials.length];
@@ -63,7 +63,7 @@ export const Giants: HDKComponent = (props) => {
                   }}
                 ></HNode>
                 <Prefab
-                  material="glass"
+                  material={"glass" as MaterialId}
                   id="rounded_cube_02"
                   rotX={35}
                   z={0}

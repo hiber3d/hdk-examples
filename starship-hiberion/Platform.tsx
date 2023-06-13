@@ -18,7 +18,7 @@ export const Platform: StarshipComponent = ({
       rows={19}
       columns={11}
       itemSpacing={8}
-      children={() => {
+      renderItem={() => {
         return <Prefab id="en_p_grid_platform_01" scaleX={2.2} scaleZ={2.2} />;
       }}
     ></Grid>

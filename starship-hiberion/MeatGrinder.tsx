@@ -1,4 +1,4 @@
-import { materials } from "@hiber3d/hdk-core";
+import { MaterialId, materials } from "@hiber3d/hdk-core";
 import { HDKComponent, HNode, Prefab, useRandom } from "@hiber3d/hdk-react";
 import {
   SegmentedStack,
@@ -17,7 +17,7 @@ export const MeatGrinder: HDKComponent = (props) => {
             id="gpl_rotating_twist_01"
             scaleX={2.6}
             scaleZ={2.6}
-            material={materials.palette_02_silver.id}
+            material={materials.palette_02_silver.id as MaterialId}
           />
         </Spinning>
 

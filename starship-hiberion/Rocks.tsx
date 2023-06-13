@@ -6,11 +6,11 @@ import { HDKComponent, HNode, Prefab } from "@hiber3d/hdk-react";
 export const Rocks: HDKComponent = (input) => (
   <HNode z={-240}>
     <Distribute
-      spaceMax={1}
-      spaceMin={0.5}
-      gapMin={0.5}
-      gapMax={1}
-      gapFreq={0.1}
+      itemAreaSizeMax={1}
+      itemAreaSizeMin={0.5}
+      gapSizeMin={0.5}
+      gapSizeMax={1}
+      gapFrequency={0.1}
       outerBoundRadius={30}
       gladeRadius={10}
       renderItem={(item) => {
