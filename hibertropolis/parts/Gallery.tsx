@@ -1,22 +1,26 @@
-import { InCircle, MediaDisplay } from "@hiber3d/hdk-react-components";
-import { displayData } from "../data";
+import { InCircle, MediaDisplay, MediaDisplayOptions } from '@hiber3d/hdk-react-components';
+import { useContent } from '../useContent';
 
-export const Gallery = () => (
-  <InCircle
-    radius={5}
-    faceCenter
-    degrees={320}
-    y={56}
-    rotY={143}
-    items={displayData.mediaStand.length}
-    renderItem={({ index }) => {
-      const media = displayData.mediaStand[index];
+export const Gallery = () => {
+  const content = useContent();
 
-      if (!media.src) {
-        return null;
-      }
+  return (
+    <InCircle
+      radius={5}
+      faceCenter
+      degrees={320}
+      y={56}
+      rotY={143}
+      items={content.mediaStand.length}
+      renderItem={({ index }) => {
+        const media = content.mediaStand[index] as MediaDisplayOptions;
 
-      return <MediaDisplay rotY={90} s={1.2} {...media} />;
-    }}
-  />
-);
+        if (!media.src) {
+          return null;
+        }
+
+        return <MediaDisplay rotY={90} scale={1.2} {...media} muted />;
+      }}
+    />
+  );
+};

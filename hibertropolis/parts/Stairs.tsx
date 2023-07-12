@@ -1,7 +1,7 @@
 import { HDKComponent, useRandom, HNode, Prefab, Random } from '@hiber3d/hdk-react';
 import { StairSystem, StairSystemItem, StairSystemOptions } from '@hiber3d/hdk-react-components';
 
-import { HNode as HNodeType, PrefabId } from '@hiber3d/hdk-core';
+import { PrefabId, TransformProperties } from '@hiber3d/hdk-core';
 
 const stairTop: StairSystemOptions = {
   sections: [
@@ -93,7 +93,7 @@ const Stair: HDKComponent = props => (
 
 const renderStairs = (data: StairSystemItem) => {
   const random = useRandom();
-  const { direction, index, r } = data;
+  const { direction, index, rotation } = data;
   const isRamp = direction.includes('_');
 
   const Component = isRamp ? Stair : Platform;
@@ -105,31 +105,31 @@ const renderStairs = (data: StairSystemItem) => {
   const hasLight = index % 2 === 1;
 
   // Add transforms
-  const transform: HNodeType = {};
+  const transform: TransformProperties = {};
   if (!hasLight && random.value() < 0.5) {
     if (isRamp) {
-      if (r[1] === -90) {
+      if (rotation[1] === -90) {
         transform.x = -0.5;
         transform.rotY = -15;
-      } else if (![-180, -270, 90].includes(r[1])) {
+      } else if (![-180, -270, 90].includes(rotation[1])) {
         transform.y = -0.5;
         transform.rotZ = -15;
       }
     } else {
-      if (r[1] === -90) {
+      if (rotation[1] === -90) {
         transform.x = -0.5;
         transform.y = -1;
         transform.rotX = 70;
         transform.rotZ = 10;
-      } else if (r[1] === -180) {
+      } else if (rotation[1] === -180) {
         transform.y = -1;
         transform.z = -1;
         transform.rotX = 100;
         transform.rotZ = -10;
-      } else if (r[1] === -270) {
+      } else if (rotation[1] === -270) {
         transform.y = -1;
         transform.z = -0.5;
-      } else if (r[1] === 90) {
+      } else if (rotation[1] === 90) {
         transform.z = -0.5;
         transform.y = -1;
         transform.rotX = 70;
