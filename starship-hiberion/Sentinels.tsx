@@ -1,4 +1,3 @@
-import React from "react";
 import { HNode, Prefab, Animation } from "@hiber3d/hdk-react";
 import { Hovering, Spinning } from "@hiber3d/hdk-react-components";
 

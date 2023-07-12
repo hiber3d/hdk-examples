@@ -50,8 +50,6 @@ jobs:
               - 'example_6_media_and_interaction/**'               
             example_7_signals:
               - 'example_7_signals/**'
-            oasis_world:
-              - 'oasis_world/**'            
             dragons-nest:
               - 'dragons-nest/**'
             starship-hiberion:
