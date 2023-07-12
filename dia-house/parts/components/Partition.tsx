@@ -1,7 +1,6 @@
 import { MaterialId, Vec3 } from '@hiber3d/hdk-core';
 import { HDKComponent, Prefab, HNode } from '@hiber3d/hdk-react';
-import { Path } from '@hiber3d/hdk-react-components';
-import { GlassCube } from '@hiber3d/hdk-react-components/src/components/GlassCube';
+import { Path, GlassCube } from '@hiber3d/hdk-react-components';
 
 type PartitionProps = {
   offsetX?: number;
