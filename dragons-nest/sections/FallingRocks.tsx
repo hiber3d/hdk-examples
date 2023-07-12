@@ -6,8 +6,9 @@ const random = new RandomSeed();
 export const FallingRocks = () => (
   <>
     <Prefab id="sphere_01" material="t_rock_03" z={-20} y={85} scale={60} />
-    {Array.from({ length: 180 }).map(() => (
+    {Array.from({ length: 180 }).map((_, i) => (
       <Animation
+        key={'rock-' + i}
         animation={{
           y: [20, -250],
           duration: 6,

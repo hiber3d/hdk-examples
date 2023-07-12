@@ -8,6 +8,7 @@ export const Tree = () => {
     <Prefab id="jungle_tree_large" x={125} y={-8} scaleX={8} scaleY={4} scaleZ={8}>
       {Array.from({ length: 30 }).map((_, index) => (
         <Animation
+          key={'sand-' + index}
           animation={{
             rotY: [0, 180, 360],
             loop: 'RESTART',
@@ -26,7 +27,7 @@ export const Tree = () => {
         </Animation>
       ))}
       {Array.from({ length: 70 }).map((_, index) => (
-        <HNode rotY={(220 / 50) * index}>
+        <HNode rotY={(220 / 50) * index} key={'wood-' + index}>
           <Prefab
             id="gpl_booster_plate_02"
             material="t_wood_01"

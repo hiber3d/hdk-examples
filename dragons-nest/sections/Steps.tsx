@@ -8,11 +8,11 @@ export const Steps = () => {
   return (
     <>
       {items.map((_, i) => (
-        <Hovering y={-1} x={i * 8} magnitude={i === 0 ? 0 : 1} rotY={90}>
+        <Hovering y={-1} x={i * 8} magnitude={i === 0 ? 0 : 1} rotY={90} key={'steps-' + i}>
           <Prefab id="rock_cube_01_t2" scale={2}>
             <Prefab id="particle_jar_of_fireflies_01" y={1} />
-            {i === 0 && <HNode spawnpoint={{}} y={2} x={i * 8} />}
-            {i === length - 1 && <HNode checkpoint={{}} y={2} triggerBox={{ size: [2, 2, 2] }} />}
+            {i === 0 && <HNode engineProps={{ spawnpoint: {} }} y={2} x={i * 8} />}
+            {i === length - 1 && <HNode engineProps={{ checkpoint: {}, triggerBox: { size: [2, 2, 2] } }} y={2} />}
           </Prefab>
         </Hovering>
       ))}

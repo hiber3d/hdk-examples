@@ -55,9 +55,9 @@ export const Dragon = () => (
     <HNode x={20} y={1}>
       {Array.from({ length: 20 }, (_, index) => {
         if (index === 0) {
-          return <Head />;
+          return <Head key={index} />;
         }
-        return <BodyPart index={index} total={20} />;
+        return <BodyPart index={index} total={20} key={index} />;
       })}
     </HNode>
   </Animation>

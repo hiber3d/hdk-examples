@@ -6,8 +6,9 @@ export const RocksUnderTree = () => {
 
   return (
     <>
-      {Array.from({ length: 100 }).map(() => (
+      {Array.from({ length: 100 }).map((_, i) => (
         <Prefab
+          key={'rock-' + i}
           id="rock_pile_01_t2"
           x={100 + random.int(0, 70)}
           y={-30 - random.int(0, 200)}
