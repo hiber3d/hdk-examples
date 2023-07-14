@@ -1,5 +1,5 @@
 import { HNode, Prefab } from '@hiber3d/hdk-react';
-import { Path, Swing } from '@hiber3d/hdk-react-components';
+import { Path, Swinging } from '@hiber3d/hdk-react-components';
 
 export function SwingingPlatforms() {
   return (
@@ -12,9 +12,9 @@ export function SwingingPlatforms() {
       numberOfItems={5}
       renderItem={() => (
         <HNode rotY={45} rotX={10}>
-          <Swing degZ={20} duration={3}>
+          <Swinging degZ={20} duration={3}>
             <Prefab y={10} id="en_m_wooden_platform_01_ceiling" />
-          </Swing>
+          </Swinging>
         </HNode>
       )}
     />

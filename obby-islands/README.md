@@ -1,6 +1,6 @@
 # Obby Islands
 
-This is an example world created by @fille1000 dhowing how to create n obby using many of the built in components from HDK.
+This is an example world created by @fille1000 showing how to create an obby using many of the built in components from HDK.
 
 Please see Hiber3D HDK Docs for full documentation:
 https://developer.hiber3d.com/docs/

@@ -33,8 +33,8 @@ const World = () => (
     <CandyKey x={-105.5} y={16.7} z={-78.4} />
     <CandyKey x={-113.8} y={16.4} z={-79.7} />
     <CandyKey x={-122.9} y={18.5} z={-74.0} />
-    <OmnipresentSound id="a_mu_breath_of_the_wind_01" />
-    <OmnipresentSound id="a_am_rainforest_01" volume={0.1} />
+    <OmnipresentSound src={{ id: 'a_mu_breath_of_the_wind_01' }} />
+    <OmnipresentSound src={{ id: 'a_am_rainforest_01' }} volume={0.1} />
   </HNode>
 );
 
