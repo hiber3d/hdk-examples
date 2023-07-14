@@ -50,6 +50,8 @@ jobs:
               - 'example_6_media_and_interaction/**'               
             example_7_signals:
               - 'example_7_signals/**'
+            city:
+              - 'city/**'
             dragons-nest:
               - 'dragons-nest/**'
             starship-hiberion:
@@ -64,8 +66,6 @@ jobs:
               - 'volcano-escape/**'
             hiber-dig:
               - 'hiber-dig/**'
-            balloons:
-              - '99-balloons/**'
             hibertropolis:
               - 'hibertropolis/**'
             obby-islands:
@@ -119,11 +119,11 @@ jobs:
         with:
           world: "example_7_signals"
 
-      - name: Upload 'oasis_world'
-        if: steps.changes.outputs.oasis_world == 'true'
+      - name: Upload 'city'
+        if: steps.changes.outputs.city == 'true'
         uses: HiberWorld/code-kit-upload@latest
         with:
-          world: "oasis_world"
+          world: "city"
 
       - name: Upload 'dragons-nest'
         if: steps.changes.outputs.dragons-nest == 'true'
@@ -166,12 +166,6 @@ jobs:
         uses: HiberWorld/code-kit-upload@latest
         with:
           world: "hiber-dig"
-
-      - name: Upload '99-balloons'
-        if: steps.changes.outputs.balloons == 'true'
-        uses: HiberWorld/code-kit-upload@latest
-        with:
-          world: "99-balloons"
 
       - name: Upload 'hibertropolis'
         if: steps.changes.outputs.hibertropolis == 'true'

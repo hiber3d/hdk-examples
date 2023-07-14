@@ -1,4 +1,4 @@
-# city
+# City
 
 This is a Hiber3D HDK project created using [create-hdk](https://www.npmjs.com/package/create-hdk)
 
