@@ -52,14 +52,14 @@ jobs:
               - 'example_7_signals/**'
             city:
               - 'city/**'
+            dia-house:
+              - 'dia-house/**'
             dragons-nest:
               - 'dragons-nest/**'
             starship-hiberion:
               - 'starship-hiberion/**'
             find-the-path:
               - 'find-the-path/**'
-            kraken-battle:
-              - 'kraken-battle/**'
             train-stowaway:
               - 'train-stowaway/**'
             volcano-escape:
@@ -125,6 +125,13 @@ jobs:
         with:
           world: "city"
 
+
+      - name: Upload 'dia-house'
+        if: steps.changes.outputs.dia-house == 'true'
+        uses: hiber3d/publish@latest
+        with:
+          world: "dia-house"
+        
       - name: Upload 'dragons-nest'
         if: steps.changes.outputs.dragons-nest == 'true'
         uses: hiber3d/publish@latest
@@ -136,12 +143,6 @@ jobs:
         uses: hiber3d/publish@latest
         with:
           world: "starship-hiberion"
-
-      - name: Upload 'kraken-battle'
-        if: steps.changes.outputs.kraken-battle == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "kraken-battle"
 
       - name: Upload 'find-the-path'
         if: steps.changes.outputs.find-the-path == 'true'
