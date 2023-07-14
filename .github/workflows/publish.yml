@@ -56,10 +56,10 @@ jobs:
               - 'dia-house/**'
             dragons-nest:
               - 'dragons-nest/**'
+            getting-started:
+              - 'getting-started/**'
             starship-hiberion:
               - 'starship-hiberion/**'
-            find-the-path:
-              - 'find-the-path/**'
             train-stowaway:
               - 'train-stowaway/**'
             volcano-escape:
@@ -138,17 +138,17 @@ jobs:
         with:
           world: "dragons-nest"
 
+      - name: Upload 'getting-started'
+        if: steps.changes.outputs.getting-started == 'true'
+        uses: hiber3d/publish@latest
+        with:
+          world: "getting-started"
+  
       - name: Upload 'starship-hiberion'
         if: steps.changes.outputs.starship-hiberion == 'true'
         uses: hiber3d/publish@latest
         with:
           world: "starship-hiberion"
-
-      - name: Upload 'find-the-path'
-        if: steps.changes.outputs.find-the-path == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "find-the-path"
 
       - name: Upload 'train-stowaway'
         if: steps.changes.outputs.train-stowaway == 'true'
