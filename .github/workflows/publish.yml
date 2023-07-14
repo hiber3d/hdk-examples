@@ -73,108 +73,108 @@ jobs:
 
       - name: Upload 'all-assets'
         if: steps.changes.outputs.all-assets == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "all-assets"
 
       - name: Upload 'example_1_hello_hdk'
         if: steps.changes.outputs.example_1_hello_hdk == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_1_hello_hdk"
 
       - name: Upload 'example_2_builder'
         if: steps.changes.outputs.example_2_builder == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_2_builder"
 
       - name: Upload 'example_3_game_mechanics'
         if: steps.changes.outputs.example_3_game_mechanics == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_3_game_mechanics"
 
       - name: Upload 'example_4_meshes_and_avatars'
         if: steps.changes.outputs.example_4_meshes_and_avatars == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_4_meshes_and_avatars"
 
       - name: Upload 'example_5_procedural_rotation'
         if: steps.changes.outputs.example_5_procedural_rotation == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_5_procedural_rotation"
 
       - name: Upload 'example_6_media_and_interaction'
         if: steps.changes.outputs.example_6_media_and_interaction == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_6_media_and_interaction"
 
       - name: Upload 'example_7_signals'
         if: steps.changes.outputs.example_7_signals == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "example_7_signals"
 
       - name: Upload 'city'
         if: steps.changes.outputs.city == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "city"
 
       - name: Upload 'dragons-nest'
         if: steps.changes.outputs.dragons-nest == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "dragons-nest"
 
       - name: Upload 'starship-hiberion'
         if: steps.changes.outputs.starship-hiberion == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "starship-hiberion"
 
       - name: Upload 'kraken-battle'
         if: steps.changes.outputs.kraken-battle == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "kraken-battle"
 
       - name: Upload 'find-the-path'
         if: steps.changes.outputs.find-the-path == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "find-the-path"
 
       - name: Upload 'train-stowaway'
         if: steps.changes.outputs.train-stowaway == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "train-stowaway"
 
       - name: Upload 'volcano-escape'
         if: steps.changes.outputs.volcano-escape == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "volcano-escape"
 
       - name: Upload 'hiber-dig'
         if: steps.changes.outputs.hiber-dig == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "hiber-dig"
 
       - name: Upload 'hibertropolis'
         if: steps.changes.outputs.hibertropolis == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "hibertropolis"
 
       - name: Upload 'obby-islands'
         if: steps.changes.outputs.obby-islands == 'true'
-        uses: HiberWorld/code-kit-upload@latest
+        uses: hiber3d/publish@latest
         with:
           world: "obby-islands"
