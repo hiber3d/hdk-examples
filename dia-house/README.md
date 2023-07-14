@@ -1,28 +1,11 @@
 # dia-house
 
-This is a Hiber3D Development Kit (HDK) project created using [create-hdk](https://www.npmjs.com/package/create-hdk)
+This is an example world showing how to create a shopping experience with Hiber3D HDK.
 
-Please see [HDK Docs](https://developer.hiber3d.com/docs/) for full documentation.
+Please see Hiber3D HDK Docs for full documentation:
+https://developer.hiber3d.com/docs/
 
-Install with this command:
-
-```bash
-npm install
-```
-
-Then run with:
-
-```bash
-npm run dev
-```
-
-Upgrade to the latest version of HDK with:
-
-```bash
-npx update-by-scope @hiber3d
-```
-
-and enjoy the hiber experience at
-(http://localhost:5173/)
+The source code is available at
+https://github.com/hiber3d/hdk-examples/tree/main/dia-house
 
 Happy coding!
