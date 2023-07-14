@@ -5,7 +5,6 @@ import { Distribute } from '@hiber3d/hdk-react-components';
 export function Islands() {
   return (
     <Distribute
-      maxItems={400}
       itemAreaSizeMin={35}
       itemAreaSizeMax={45}
       gladeRadius={20}
