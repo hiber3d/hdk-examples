@@ -58,18 +58,18 @@ jobs:
               - 'dragons-nest/**'
             getting-started:
               - 'getting-started/**'
-            starship-hiberion:
-              - 'starship-hiberion/**'
-            train-stowaway:
-              - 'train-stowaway/**'
-            volcano-escape:
-              - 'volcano-escape/**'
-            hiber-dig:
-              - 'hiber-dig/**'
             hibertropolis:
               - 'hibertropolis/**'
+            hub:
+              - 'hub/**'
+            logic-gates:
+              - 'logic-gates/**'
+            hiber-dig:
+              - 'hiber-dig/**'
             obby-islands:
               - 'obby-islands/**'
+            starship-hiberion:
+              - 'starship-hiberion/**'
 
       - name: Upload 'all-assets'
         if: steps.changes.outputs.all-assets == 'true'
@@ -125,7 +125,6 @@ jobs:
         with:
           world: "city"
 
-
       - name: Upload 'dia-house'
         if: steps.changes.outputs.dia-house == 'true'
         uses: hiber3d/publish@latest
@@ -144,23 +143,23 @@ jobs:
         with:
           world: "getting-started"
   
-      - name: Upload 'starship-hiberion'
-        if: steps.changes.outputs.starship-hiberion == 'true'
+      - name: Upload 'hibertropolis'
+        if: steps.changes.outputs.hibertropolis == 'true'
         uses: hiber3d/publish@latest
         with:
-          world: "starship-hiberion"
+          world: "hibertropolis"
 
-      - name: Upload 'train-stowaway'
-        if: steps.changes.outputs.train-stowaway == 'true'
+      - name: Upload 'hub'
+        if: steps.changes.outputs.hub == 'true'
         uses: hiber3d/publish@latest
         with:
-          world: "train-stowaway"
+          world: "hub"
 
-      - name: Upload 'volcano-escape'
-        if: steps.changes.outputs.volcano-escape == 'true'
+      - name: Upload 'logic-gates'
+        if: steps.changes.outputs.logic-gates == 'true'
         uses: hiber3d/publish@latest
         with:
-          world: "volcano-escape"
+          world: "logic-gates"
 
       - name: Upload 'hiber-dig'
         if: steps.changes.outputs.hiber-dig == 'true'
@@ -168,14 +167,14 @@ jobs:
         with:
           world: "hiber-dig"
 
-      - name: Upload 'hibertropolis'
-        if: steps.changes.outputs.hibertropolis == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "hibertropolis"
-
       - name: Upload 'obby-islands'
         if: steps.changes.outputs.obby-islands == 'true'
         uses: hiber3d/publish@latest
         with:
           world: "obby-islands"
+
+      - name: Upload 'starship-hiberion'
+      if: steps.changes.outputs.starship-hiberion == 'true'
+      uses: hiber3d/publish@latest
+      with:
+        world: "starship-hiberion"
