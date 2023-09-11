@@ -49,7 +49,7 @@ const content: HibertropolisContent = {
       link: 'https://shop.hiberworld.com/',
       src: 'https://cdn.hibervr.com/static/images/hoodiespsd.jpg',
       ratio: 1,
-      openInNewTab: false,
+      isOpenInNewTabEnabled: false,
     },
     {
       header: 'Follow on Instagram',
@@ -57,7 +57,7 @@ const content: HibertropolisContent = {
       link: 'https://www.instagram.com/hiber3d',
       src: 'https://cdn.hibervr.com/images/art3.jpg',
       ratio: 1,
-      openInNewTab: true,
+      isOpenInNewTabEnabled: true,
     },
     {
       header: 'Follow on Twitter',
@@ -65,7 +65,7 @@ const content: HibertropolisContent = {
       link: 'https://twitter.com/hiber3d/',
       src: 'https://cdn.hibervr.com/images/art4.jpg',
       ratio: 1,
-      openInNewTab: true,
+      isOpenInNewTabEnabled: true,
     },
   ],
 };
