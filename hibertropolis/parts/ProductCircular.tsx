@@ -36,7 +36,7 @@ export const ProductsCircular: HDKComponent<ProductsCircularProps> = ({
             <MannequinStand
               rotY={90}
               spin={true}
-              openInNewTab={false}
+              isOpenInNewTabEnabled={false}
               mannequinScale={mannequinScale}
               podiumMaterial={material}
               {...avatar}
