@@ -1,4 +1,4 @@
-import { HDKComponent, HNode, InfoPanel, Material, Prefab } from '@hiber3d/hdk-react';
+import { HDKComponent, HNode, InfoPanel, ApplyMaterial, Prefab } from '@hiber3d/hdk-react';
 import { ImagePanel, InCircle, MannequinStand } from '@hiber3d/hdk-react-components';
 import { useContent } from '../useContent';
 
@@ -49,9 +49,9 @@ export const ProductsCircular: HDKComponent<ProductsCircularProps> = ({
               isOpenInOverlayEnabled={physical.isOpenInOverlayEnabled}
               isOpenInOverlayOnTouch={physical.isOpenInOverlayOnTouch}>
               <HNode z={3.5} x={-0.5} rotY={90}>
-                <Material id={material}>
+                <ApplyMaterial id={material}>
                   <Prefab id="display_shelf_04" x={0.05} />
-                </Material>
+                </ApplyMaterial>
                 <ImagePanel src={physical.image} y={1} scale={1.5} z={1} />
                 <Prefab id="storeprop_tshirt_stack_01" material="palette_01_black" y={1.15} x={-0.2} />
                 <Prefab id="storeprop_tshirt_stack_01" material="palette_01_black" y={1.15} x={0.2} />

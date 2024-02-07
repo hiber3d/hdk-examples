@@ -1,4 +1,6 @@
 import { materials, meshes } from '@hiber3d/hdk-assets';
+import { Collectible } from '@hiber3d/hdk-core';
+
 import { HDKComponent, HNode } from '@hiber3d/hdk-react';
 import { Spinning } from '@hiber3d/hdk-react-components';
 
@@ -17,7 +19,7 @@ export const CandyKey: HDKComponent = ({ ...props }) => (
           resetFxId: 'fx_reset_collectible_gem_01',
           grabbingOffset: [0, 0, 0],
           grabbingRadius: 1,
-        },
+        } as Collectible,
       }}
     />
   </Spinning>
