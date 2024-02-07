@@ -1,5 +1,5 @@
 import { HDKComponent, HNode, useRandom } from '@hiber3d/hdk-react';
-import { Bird } from '@hiber3d/hdk-react-components';
+import { Bird, BirdProps } from '@hiber3d/hdk-react-components';
 
 type BirdFlockProps = {
   numberOfBirds?: number;
@@ -7,6 +7,7 @@ type BirdFlockProps = {
   verticalSpread?: number;
   flapSpeed?: number | undefined;
   flySpeed?: number | undefined;
+  type?: BirdProps['type'];
 };
 
 /**
@@ -28,6 +29,7 @@ export const BirdFlock: HDKComponent<BirdFlockProps> = ({
   verticalSpread = 5,
   flySpeed = undefined,
   flapSpeed = undefined,
+  type,
   ...props
 }) => {
   const items = [];
@@ -44,6 +46,7 @@ export const BirdFlock: HDKComponent<BirdFlockProps> = ({
         z={random.range(-radius, radius)}
         y={random.range(-verticalSpread, verticalSpread)}
         clockwise={random.fromArray([true, false])}
+        type={type}
       />
     );
   }

@@ -1,4 +1,6 @@
 import {
+  Animation,
+  Audio,
   ButtonSensor,
   HNode,
   InvisibleOnSignal,
@@ -9,7 +11,7 @@ import {
   ProximitySensor,
   SpawnPrefabOnSignal,
   SpotLight,
-  Animation,
+  VisibleOnSignal,
   XorGate,
   render,
 } from '@hiber3d/hdk-react';
@@ -36,7 +38,7 @@ const ButtonsExample = () => (
     <PointLight x={10} color="crimson" lightOnSignal={{ input: 'lookat' }} />
 
     <PointSound radius={30} src={{ id: 'a_fx_damage_01' }} looping playOnSignal={{ input: 'lookat' }} />
-    <OmnipresentSound src={{ url: 'a_am_autumn_wind_01' }} />
+    <OmnipresentSound src={{ id: 'a_am_autumn_wind_01' }} />
     <OmnipresentSound src={{ id: 'a_am_amusement_park_01' }} playOnSignal={{ input: 'lookat', solo: true }} />
 
     <ProximitySensor output="closeToBox" y={3} x={20} showMaxDistance />
@@ -46,15 +48,28 @@ const ButtonsExample = () => (
     </MaterialOnSignal>
     <Spawnpoint z={-5} />
 
-    <Animation x={-10} animation={{
+    <Animation
+      x={-10}
+      animation={{
         y: [0, 10],
         duration: 4,
-        initialState: "PAUSED",
-        playOnSignal: { input: "elevator", behavior: "PLAY_UNTIL_HALF_WHEN_ON_REVERSE_WHEN_OFF" }
+        initialState: 'PAUSED',
+        playOnSignal: { input: 'elevator', behavior: 'PLAY_UNTIL_HALF_WHEN_ON_REVERSE_WHEN_OFF' },
       }}>
       <Prefab id="disc_02" />
       <ProximitySensor output="elevator" maxDistance={3} showMaxDistance />
     </Animation>
+
+    <HNode z={5}>
+      <ButtonSensor output="turnOffAfter1Second" durationInSeconds={1} scale={10} />
+      <VisibleOnSignal input="turnOffAfter1Second">
+        <Prefab id="ancient_urn_01" y={1} />
+      </VisibleOnSignal>
+      <Audio
+        src={{ url: 'https://cdn.hibervr.com/external/hdk/filip/tunnel/scrape.mp3' }}
+        playOnSignal={{ input: 'turnOffAfter1Second' }}
+      />
+    </HNode>
   </HNode>
 );
 
