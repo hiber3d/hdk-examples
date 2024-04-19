@@ -5,7 +5,7 @@ import {
   Prefab,
   Random,
   useRandom,
-  Material,
+  ApplyMaterial,
 } from "@hiber3d/hdk-react";
 
 import {
@@ -48,7 +48,6 @@ export const Djungle: HDKComponent = (props) => {
       </Invisible>
       <HNode x={0} y={-35.5} z={40}>
         <Distribute
-      
           outerBoundRadius={35}
           gapFrequency={0.1}
           gapSizeMin={8}
@@ -74,7 +73,6 @@ export const Djungle: HDKComponent = (props) => {
       </HNode>
       <HNode x={0} y={-29.5} z={40}>
         <Distribute
-   
           outerBoundRadius={20}
           gapFrequency={0.2}
           gapSizeMax={30}
@@ -115,7 +113,7 @@ export const Djungle: HDKComponent = (props) => {
       <Random seed={14}>
         <HNode x={0} y={-30} z={40}>
           <Damaging amount={10} knockbackStrength={50}>
-            <Material id="t_sci_fi_tile_02">
+            <ApplyMaterial id="t_sci_fi_tile_02">
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
@@ -124,7 +122,7 @@ export const Djungle: HDKComponent = (props) => {
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
               <Fish dimensions={fishDimensions} speed={fishSpeed} />
-            </Material>
+            </ApplyMaterial>
           </Damaging>
         </HNode>
       </Random>
