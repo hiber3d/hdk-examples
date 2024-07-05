@@ -5,7 +5,7 @@ update_folder() {
   (
     cd "$1" || exit 1
     echo "Starting update in folder: $1"
-    npx update-by-scope @hiber3d
+    npm update
     yarn
     yarn dev
     echo "Completed update in folder: $1"

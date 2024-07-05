@@ -36,7 +36,7 @@ const ButtonsExample = () => (
     <PointLight x={10} color="crimson" lightOnSignal={{ input: 'lookat' }} />
 
     <PointSound radius={30} src={{ id: 'a_fx_damage_01' }} looping playOnSignal={{ input: 'lookat' }} />
-    <OmnipresentSound src={{ url: 'a_am_autumn_wind_01' }} />
+    <OmnipresentSound src={{ id: 'a_am_autumn_wind_01' }} />
     <OmnipresentSound src={{ id: 'a_am_amusement_park_01' }} playOnSignal={{ input: 'lookat', solo: true }} />
 
     <ProximitySensor output="closeToBox" y={3} x={20} showMaxDistance />

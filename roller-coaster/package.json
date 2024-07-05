@@ -1,17 +1,18 @@
 {
   "name": "roller-coaster",
-  "version": "0.0.30",
+  "version": "0.0.161",
   "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "hdk dev --open",
-    "upload": "hdk upload"
+    "upload": "hdk upload",
+    "update": "npx update-by-score \"@hiber3d\""
   },
   "dependencies": {
-    "@hiber3d/hdk-cli": "^0.5.7",
-    "@hiber3d/hdk-core": "^0.11.1",
-    "@hiber3d/hdk-react": "^0.8.1",
-    "@hiber3d/hdk-react-components": "^0.9.1",
-    "@hiber3d/hdk-utils": "^0.4.28"
+    "@hiber3d/hdk-cli": "^1.1.12",
+    "@hiber3d/hdk-core": "^1.0.7",
+    "@hiber3d/hdk-react": "^1.1.5",
+    "@hiber3d/hdk-react-components": "^1.0.7",
+    "@hiber3d/hdk-utils": "^1.0.7"
   }
 }

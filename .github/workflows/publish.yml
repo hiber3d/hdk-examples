@@ -68,8 +68,6 @@ jobs:
               - 'obby-islands/**'
             roller-coaster:
               - 'roller-coaster/**'
-            starship-hiberion:
-              - 'starship-hiberion/**'
 
       - name: Upload 'all-assets'
         if: steps.changes.outputs.all-assets == 'true'
@@ -173,8 +171,3 @@ jobs:
         with:
           world: "roller-coaster"
 
-      - name: Upload 'starship-hiberion'
-        if: steps.changes.outputs.starship-hiberion == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "starship-hiberion"
