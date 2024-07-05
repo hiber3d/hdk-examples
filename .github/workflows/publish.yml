@@ -7,9 +7,51 @@ on:
       - main
 
 jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            example_1_hello_hdk: ['example_1_hello_hdk/**']
+            example_2_builder: ['example_2_builder/**']
+            example_3_game_mechanics: ['example_3_game_mechanics/**']
+            example_4_meshes_and_avatars: ['example_4_meshes_and_avatars/**']
+            example_5_procedural_rotation: ['example_5_procedural_rotation/**']
+            example_6_media_and_interaction: ['example_6_media_and_interaction/**']
+            example_7_signals: ['example_7_signals/**']
+            city: ['city/**']
+            dia-house: ['dia-house/**']
+            dragons-nest: ['dragons-nest/**']
+            getting-started: ['getting-started/**']
+            hibertropolis: ['hibertropolis/**']
+            hub: ['hub/**']
+            logic-gates: ['logic-gates/**']
+            obby-islands: ['obby-islands/**']
+            roller-coaster: ['roller-coaster/**']
+            thetunnel: ['thetunnel/**']
+
+      - name: Set matrix
+        id: set-matrix
+        run: |
+          CHANGED_WORLDS=$(echo '${{ toJSON(steps.changes.outputs) }}' | jq -r 'to_entries | map(select(.value == "true")) | map(.key) | tostring')
+          echo "matrix=$CHANGED_WORLDS" >> $GITHUB_OUTPUT
+
   build-and-publish:
+    needs: prepare
+    if: ${{ needs.prepare.outputs.matrix != '[]' }}
     name: Build and Publish Worlds
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        world: ${{fromJson(needs.prepare.outputs.matrix)}}
     env:
       DEVELOPER_TOKEN: ${{ secrets.DEVELOPER_TOKEN }}
     steps:
@@ -21,154 +63,26 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.npm
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
           key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.OS }}-node-
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f "${{ matrix.world }}/package.json" ]; then
+            cd ${{ matrix.world }}
+            npm ci
+          fi
 
-      - uses: dorny/paths-filter@v2
-        id: changes
-        with:
-          filters: |
-            example_1_hello_hdk:
-              - 'example_1_hello_hdk/**'
-            example_2_builder:
-              - 'example_2_builder/**'            
-            example_3_game_mechanics:
-              - 'example_3_game_mechanics/**'                
-            example_4_meshes_and_avatars:
-              - 'example_4_meshes_and_avatars/**'                
-            example_5_procedural_rotation:
-              - 'example_5_procedural_rotation/**'                
-            example_6_media_and_interaction:
-              - 'example_6_media_and_interaction/**'               
-            example_7_signals:
-              - 'example_7_signals/**'
-            city:
-              - 'city/**'
-            dia-house:
-              - 'dia-house/**'
-            dragons-nest:
-              - 'dragons-nest/**'
-            getting-started:
-              - 'getting-started/**'
-            hibertropolis:
-              - 'hibertropolis/**'
-            hub:
-              - 'hub/**'
-            logic-gates:
-              - 'logic-gates/**'
-            obby-islands:
-              - 'obby-islands/**'
-            roller-coaster:
-              - 'roller-coaster/**'            
-            thetunnel:
-              - 'thetunnel/**'
-
-      - name: Upload 'example_1_hello_hdk'
-        if: steps.changes.outputs.example_1_hello_hdk == 'true'
+      - name: Upload world
         uses: hiber3d/publish@latest
         with:
-          world: "example_1_hello_hdk"
-
-      - name: Upload 'example_2_builder'
-        if: steps.changes.outputs.example_2_builder == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "example_2_builder"
-
-      - name: Upload 'example_3_game_mechanics'
-        if: steps.changes.outputs.example_3_game_mechanics == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "example_3_game_mechanics"
-
-      - name: Upload 'example_4_meshes_and_avatars'
-        if: steps.changes.outputs.example_4_meshes_and_avatars == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "example_4_meshes_and_avatars"
-
-      - name: Upload 'example_5_procedural_rotation'
-        if: steps.changes.outputs.example_5_procedural_rotation == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "example_5_procedural_rotation"
-
-      - name: Upload 'example_6_media_and_interaction'
-        if: steps.changes.outputs.example_6_media_and_interaction == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "example_6_media_and_interaction"
-
-      - name: Upload 'example_7_signals'
-        if: steps.changes.outputs.example_7_signals == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "example_7_signals"
-
-      - name: Upload 'city'
-        if: steps.changes.outputs.city == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "city"
-
-      - name: Upload 'dia-house'
-        if: steps.changes.outputs.dia-house == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "dia-house"
-        
-      - name: Upload 'dragons-nest'
-        if: steps.changes.outputs.dragons-nest == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "dragons-nest"
-
-      - name: Upload 'getting-started'
-        if: steps.changes.outputs.getting-started == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "getting-started"
-  
-      - name: Upload 'hibertropolis'
-        if: steps.changes.outputs.hibertropolis == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "hibertropolis"
-
-      - name: Upload 'hub'
-        if: steps.changes.outputs.hub == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "hub"
-
-      - name: Upload 'logic-gates'
-        if: steps.changes.outputs.logic-gates == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "logic-gates"
-
-      - name: Upload 'obby-islands'
-        if: steps.changes.outputs.obby-islands == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "obby-islands"
-
-      - name: Upload 'roller-coaster'
-        if: steps.changes.outputs.roller-coaster == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "roller-coaster"
-
-      - name: Upload 'thetunnel'
-        if: steps.changes.outputs.thetunnel == 'true'
-        uses: hiber3d/publish@latest
-        with:
-          world: "thetunnel"
+          world: ${{ matrix.world }}
