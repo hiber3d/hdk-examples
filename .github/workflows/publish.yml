@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
+        run: npm i
 
   Publish:
     name: Publish worlds
@@ -67,7 +67,9 @@ jobs:
             obby-islands:
               - 'obby-islands/**'
             roller-coaster:
-              - 'roller-coaster/**'
+              - 'roller-coaster/**'            
+            thetunnel:
+              - 'thetunnel/**'
 
       - name: Upload 'all-assets'
         if: steps.changes.outputs.all-assets == 'true'
@@ -170,4 +172,10 @@ jobs:
         uses: hiber3d/publish@latest
         with:
           world: "roller-coaster"
+
+      - name: Upload 'thetunnel'
+        if: steps.changes.outputs.thetunnel == 'true'
+        uses: hiber3d/publish@latest
+        with:
+          world: "thetunnel"
 
