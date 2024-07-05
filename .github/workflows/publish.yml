@@ -56,10 +56,10 @@ jobs:
       DEVELOPER_TOKEN: ${{ secrets.DEVELOPER_TOKEN }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -71,9 +71,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}-1
 
       - name: Install dependencies
         run: |
