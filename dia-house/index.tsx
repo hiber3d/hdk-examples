@@ -1,6 +1,6 @@
 import { HNode, render } from '@hiber3d/hdk-react';
 import { Ground, OmnipresentSound, Spawnpoint } from '@hiber3d/hdk-react-components';
-import { CircularStructureProps } from './parts/components/CircularStructure';
+import { CircularStructureProps } from '@hiber3d/hdk-react-components';
 import { MainWing } from './parts/components/MainWing';
 import { MainWingInterior } from './parts/components/MainWingInterior';
 import { SideWing } from './parts/components/SideWing';
