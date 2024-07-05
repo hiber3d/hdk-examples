@@ -6,8 +6,8 @@ update_folder() {
     cd "$1" || exit 1
     echo "Starting update in folder: $1"
     npm update
-    yarn
-    yarn dev
+    npm i
+    npm run dev
     echo "Completed update in folder: $1"
   ) > "$1/update.log" 2>&1 &
 }
