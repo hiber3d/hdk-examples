@@ -45,7 +45,7 @@ const World = () => (
     <InCircle y={-1} radius={0} items={3} renderItem={<Stalk />} faceCenter />
     <Asteroids />
 
-    <InfoPanel body="Test!">
+    <InfoPanel header="Test" body="Test!">
       <Invisible>
         <Prefab id="cube_01" />
       </Invisible>

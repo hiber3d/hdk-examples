@@ -65,7 +65,7 @@ const Building: HDKComponent = props => {
         <Avatar animation="an_default_emote_sitting_idle_02" y={0.16} z={0.12} rotY={20} />
       </Prefab>
       <Prefab id="floor_lamp_01" rotY={210} x={4} y={0.1} scale={2} />
-      <VideoPanel src={'https://cdn.hibervr.com/video/Hiber3D.mp4'} y={7} z={-8.5} scale={5} rotY={180}></VideoPanel>
+      <VideoPanel src={'https://cdn.hibervr.com/video/Hiber3D.mp4'} y={7} z={-8.5} scale={5} rotY={180} />
     </Room>
   );
 };

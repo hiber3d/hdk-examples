@@ -1,6 +1,7 @@
 import React from 'react';
 import { Prefab, HNode, Animation } from '@hiber3d/hdk-react';
 import { useRandom } from '@hiber3d/hdk-react';
+import { Checkpoint } from '@hiber3d/hdk-react-components';
 
 export const Tree = () => {
   const random = useRandom();
@@ -38,7 +39,7 @@ export const Tree = () => {
             rotX={20}
             rotY={180}>
             <Prefab id="fx_particlesystem_mist_01" />
-            {index % 5 == 0 && <HNode y={2.7} scale={2} checkpoint={{}} triggerBox={{ size: [2, 2, 2] }} />}
+            {index % 5 == 0 && <Checkpoint y={2.7} scale={2} engineProps={{ triggerBox: { size: [2, 2, 2] } }} />}
           </Prefab>
         </HNode>
       ))}
