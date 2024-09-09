@@ -1,5 +1,5 @@
 import { HDKComponent, Prefab } from '@hiber3d/hdk-react';
-import { CircularStructureProps } from './CircularStructure';
+import { CircularStructureProps } from '@hiber3d/hdk-react-components';
 
 export const CircularDisc: HDKComponent<CircularStructureProps> = ({
   radius = 10,
