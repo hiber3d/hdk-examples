@@ -1,12 +1,14 @@
-import { HDKComponent, HNode, Prefab, render, useRandom } from '@hiber3d/hdk-react';
+import { Collectible, HDKComponent, HNode, Prefab, PrefabDefinition, render, useRandom } from '@hiber3d/hdk-react';
 import {
   AsteroidSpinning,
   Avatar,
   Distribute,
   Ground,
+  Mesh,
   Orbiting,
   RandomTilt,
   Room,
+  Spawnpoint,
   VideoPanel,
 } from '@hiber3d/hdk-react-components';
 
@@ -65,18 +67,20 @@ const Building: HDKComponent = props => {
         <Avatar animation="an_default_emote_sitting_idle_02" y={0.16} z={0.12} rotY={20} />
       </Prefab>
       <Prefab id="floor_lamp_01" rotY={210} x={4} y={0.1} scale={2} />
-      <VideoPanel src={'https://cdn.hibervr.com/video/Hiber3D.mp4'} y={7} z={-8.5} scale={5} rotY={180}></VideoPanel>
+      <VideoPanel src={'https://cdn.hibervr.com/video/Hiber3D.mp4'} y={7} z={-8.5} scale={5} rotY={180} />
     </Room>
   );
 };
 
-const World = () => (
-  <HNode>
-    {/* <Building y={0} z={20} /> */}
-    <Foliages y={-1.5} />
-    <OrbitingAsteroids y={20} />
-    <Ground hilly={1} material="t_sand_01" />
-  </HNode>
-);
+const World = () => {
+  return (
+    <HNode>
+      <Collectible type="MANDATORY" z={5} thumbnailUrl="https://m.media-amazon.com/images/I/710dct68n1L.jpg">
+        <Mesh id="en_p_radio_01" material="chrome" />
+      </Collectible>
+      <Prefab id="cube_01" y={-2} scaleX={8} scaleZ={8} />
+    </HNode>
+  );
+};
 
 render(<World />, { environment: 'midday_01' });

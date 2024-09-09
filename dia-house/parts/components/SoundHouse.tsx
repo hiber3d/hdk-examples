@@ -35,7 +35,7 @@ const DJBooth: HDKComponent = ({ ...props }) => (
   </InfoPanel>
 );
 
-const Particles: HDKComponent = ({ ...props }) => (
+const Particles: HDKComponent = () => (
   <>
     <Apply
       props={{
